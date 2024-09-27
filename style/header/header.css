@@ -1,0 +1,107 @@
+.h1_anuncio_header{
+    font-family: "Kanit", sans-serif;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.header_principal{
+    padding: 0%;
+    margin: 0%;
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #151515;  
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 10px 10px 15px 5px rgba(55, 55, 55, 0.12)
+}
+
+.div_logo_header{
+    color: #ffffff;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;    
+}
+
+.logo_header{
+    display: flex;
+    height: 100%;
+    margin-left: 40px;
+}
+
+.div_ini_sesion_header{
+    width: 510px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+.btn_ini_sesion_header{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn_publicar_header{
+    display: flex;
+    height: 100%;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.btn_publicar{
+    font-size: 30px;
+    background-color: rgba(0, 128, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-family: "Kanit", sans-serif;
+}
+
+.btn_logo{
+    font-size: 30px;
+    background-color: rgba(0, 128, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-family: "Kanit", sans-serif;
+}
+
+.header-iniciar-sesion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.btn_ini_sesion_header:hover{
+    background-color: #252525;
+}
+.header-iniciar-sesion:hover{
+    color: #0dff00;
+}
+
+h1{
+    padding: 0;
+    margin: 0%;
+}
+
+.name_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}

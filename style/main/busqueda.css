@@ -1,0 +1,119 @@
+.section_principal{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 90px; 
+}
+
+.div_busqueda_main{
+    width: 940px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px;
+    border-radius: 50px;
+    background-color: #191919;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
+}
+
+.div_icono_buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+    border-radius: 50px 0 0 50px;
+
+}
+
+.div_icono_buscar:hover {
+    background-color: #242424; /* Cambia el color al pasar el mouse */
+}
+
+.img_icono_buscar{
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.input_buscar{
+    width: 400px;
+    height: 74px;
+    font-size: 24px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    font-family: "Kanit", sans-serif;
+}
+
+
+.div_input_buscar{
+    width: 400px;
+    height: 100%;
+}
+
+.div_icono_buscar{
+    width: 80px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.div_categorias_main{
+    width: 280px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.div_categorias_main:hover {
+    background-color: #242424; /* Cambia el color al pasar el mouse */
+}
+
+.div_lugar_main{
+    width: 180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border-radius: 0 50px 50px 0;
+}
+
+.div_lugar_main:hover {
+    background-color: #242424; /* Cambia el color al pasar el mouse */
+}
+
+.img_icono_categoria{
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.btn_categoria{
+    margin-right: 10px;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    font-family: "Kanit", sans-serif;
+}
+
+.img_icono_gps{
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.btn_lugar{
+    margin-right: 10px;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    font-family: "Kanit", sans-serif;
+}
+

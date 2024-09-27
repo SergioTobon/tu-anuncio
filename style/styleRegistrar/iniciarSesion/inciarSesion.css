@@ -1,0 +1,156 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #151515;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.h2-iniciar-sesion {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.img-correo-iniciar-sesion {
+    width: 30px;
+    pointer-events: none; /* Hace que el icono no interfiera con los clicks */
+}
+
+.img-contraseña-iniciar-sesion {
+    width: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.contenido-principal {
+    display: flex;
+    width: 100%;
+    height: 100vh; 
+}
+
+.contenido-imagenes {
+    width: 50%;
+    height: 100vh;
+}
+
+
+.contenido-iniciar-sesion {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.panel-contenido-iniciar-sesion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100vh;
+    gap: 20px;
+}
+
+.inputs-iniciar-sesion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Ancho fijo */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input-correo-iniciar-sesion,
+.input-contraseña-iniciar-sesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 300px; /* Usar 100% para que el ancho coincida con el contenedor padre */
+    margin-left: 30px;
+    margin-right: 10px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 17px;
+    background-color: #1e1e1e;
+    padding: 10px;
+}
+
+.input-correo-iniciar-sesion::placeholder , .input-contraseña-iniciar-sesion::placeholder{
+    color: #cacaca;
+
+}
+
+.btn-iniciar-sesion {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    width: 200px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #1e1e1e;
+    cursor: pointer;
+}
+
+.btn-iniciar-sesion:hover {
+    background-color: #252525;
+    color: #0dff00;
+}
+
+
+.input-correo-iniciar-sesion-icono, .input-contraseña-iniciar-sesion-icono{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.a-registrar-iniciar-sesion{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.olvido-contrasena , .registrarse{
+    color: #ffffff;
+}
+
+.olvido-contrasena:hover , .registrarse:hover{
+    color: #0dff00;
+}
+
+/* ==================================================================================================================================================*/
+
+.contenido-imagenes {
+    width: 100%; /* Ajusta según tu diseño */
+    height: 100vh; /* Asegura que el div ocupe toda la altura de la ventana */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    position: relative;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Efecto de transición para el salto */
+}
+
+.carrusel img {
+    width: 100%; /* Asegura que cada imagen cubra el 100% del ancho de la ventana */
+    height: 100%; /* Asegura que cada imagen ocupe el 100% de la altura del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen y cubre el contenedor */
+}
+
+
+
+
+
+
+

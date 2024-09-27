@@ -1,0 +1,130 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #151515;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.h2-registrarse {
+    padding: 0%;
+    margin: 0%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.contenido-registrarse{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    height: 0%;
+    width: 50%;
+    height: 100vh;
+}
+
+.panel-contenido-registrarse{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 70px;
+    width: 100%;
+    height: 100vh;
+    gap: 10px;
+}
+
+.inputs-registrarse{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Ancho fijo */
+    justify-content: center;
+    align-items: center;
+}
+
+.input-correo-registrarse,
+.input-contraseña-registrarse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 300px; /* Usar 100% para que el ancho coincida con el contenedor padre */
+    margin-left: 30px;
+    margin-right: 10px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 17px;
+    background-color: #1e1e1e;
+    padding: 10px;
+}
+
+.input-correo-registrarse::placeholder , .input-contraseña-registrarse::placeholder{
+    color: #cacaca;
+
+}
+
+.btn-registrarse {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    width: 200px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #1e1e1e;
+    cursor: pointer;
+}
+
+
+.btn-registrarse:hover {
+    background-color: #252525;
+    color: #0dff00;
+}
+
+.input-correo-registrarse-icono, .input-contraseña-registrarse-icono{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-registrar-registrarse{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+/* ==================================================================================================================================================*/
+
+.contenido-imagenes {
+    width: 100%; /* Ajusta según tu diseño */
+    height: 100vh; /* Asegura que el div ocupe toda la altura de la ventana */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    position: relative;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Efecto de transición para el salto */
+}
+
+.carrusel img {
+    width: 100%; /* Asegura que cada imagen cubra el 100% del ancho de la ventana */
+    height: 100%; /* Asegura que cada imagen ocupe el 100% de la altura del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen y cubre el contenedor */
+}
+
+
+
+
+
+
+
