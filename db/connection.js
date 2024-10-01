@@ -9,6 +9,8 @@ class Database {
 
   // Método para inicializar la conexión
   async connect() {
+    console.log("Connecting");
+ 
     if (!this.connection) {
       try {
         this.connection = await mysql.createConnection(dbConfig);

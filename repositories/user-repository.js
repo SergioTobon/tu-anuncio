@@ -12,8 +12,8 @@ class UserRepository {
     try {
       connection = await this.database.connect();
       const result = await connection.query(
-        "INSERT INTO usuario (username, email, password, tipo) VALUES (?, ?, ?, ?)",
-        [user.username, user.email, user.password, user.tipo]
+        "INSERT INTO usuario (username, email, password, tipo, membresia) VALUES (?, ?, ?, ?, ?)",
+        [user.username, user.email, user.password, user.tipo, user.membresia]
       );
       return result;
     } catch (error) {
