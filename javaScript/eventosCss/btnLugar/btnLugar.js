@@ -15,9 +15,9 @@ closeModalLugarBtn.onclick = function() {
 
 // Cuando se hace clic fuera del modal de lugares, también se cierra
 window.addEventListener("click", function(event) {
-  if (event.target === modalLugar) {
-      modalLugar.style.display = "none";
-  }
+if (event.target === modalLugar) {
+    modalLugar.style.display = "none";
+}
 });
 // Función que maneja la selección del lugar
 function choosePlace(place) {

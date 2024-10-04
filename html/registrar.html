@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +14,11 @@
     <!-- Fin links de estilos CSS -->
 
 </head>
+
 <body>
 
     <section class="contenido-principal">
-        
+
         <header class="header_principal">
             <div class="div_logo_header">
                 <div class="logo_header">
@@ -24,13 +26,13 @@
                 </div>
                 <div class="name_header">
                     <h1 class="h1_anuncio_header"><a href="http://127.0.0.1:5500/index.html#">TuAnuncio</a></h1>
-                </div>       
+                </div>
             </div>
             <div class="div_ini_sesion_header">
                 <div class="btn_publicar_header">
                     <button class="btn_publicar"><a href="#">Publicar</a></button>
                 </div>
-                <div class="btn_ini_sesion_header"> 
+                <div class="btn_ini_sesion_header">
                     <a href="/html/login.html" target="_blank">Iniciar Sesión</a>
                 </div>
             </div>
@@ -40,44 +42,46 @@
             <div class="contenido-imagenes">
                 <div class="contenido-imagenes">
                     <div class="carrusel"></div>
-                </div>                 
-            </div>
-
-            <div class="contenido-registrarse"> 
-                <div class="panel-contenido-registrarse">
-                    <h2 class="h2-registrarse">Crear Nueva Cuenta</h2>
-                    <div class="inputs-registrarse">
-                        <div class="input-correo-registrarse-icono">
-                            <input class="input-correo-registrarse" type="text" placeholder="Nombre">
-                        </div>
-                        <div class="input-contraseña-registrarse-icono">
-                            <input class="input-contraseña-registrarse" type="password" placeholder="Apellido">
-                        </div>
-                        <div class="input-correo-registrarse-icono">
-                            <input class="input-correo-registrarse" type="text" placeholder="Correo electrónico">
-                        </div>
-                        <div class="input-contraseña-registrarse-icono">
-                            <input class="input-contraseña-registrarse" type="password" placeholder="Contraseña">
-                        </div>
-                        <div class="input-correo-registrarse-icono">
-                            <input class="input-correo-registrarse" type="text" placeholder="Confirmar Contraseña">
-                        </div>
-                        <div class="input-correo-registrarse-icono">
-                            <input class="input-correo-registrarse" type="text" placeholder="Numero Telefonico">
-                        </div>
-                        <a href="../index.html"><button class="btn-registrarse">Registrar</button></a>   
-                    </div>
-                        <div class="a-registrar-registrarse">
-                            <a href="#" class="olvido-contrasena">Olvidé mi contraseña</a>
-                            <a href="http://127.0.0.1:5500/html/registrar.html" class="registrarse">Regístrarse</a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-    </section>
 
-    <script src="/javaScript/iniciarSesion/carruselIniciarSesion.js"></script>
+            <div class="contenido-registrarse">
+                <div class="panel-contenido-registrarse">
+                    <h2 class="h2-registrarse">Crear Nueva Cuenta</h2>
+                    <form action="" id="formulario-registrar">
+                        <div class="inputs-registrarse">
+                            <div class="input-correo-registrarse-icono">
+                                <input id="nombre" class="input-nombre-registrarse" type="text" placeholder="Nombre">
+                            </div>
+                            <div class="input-contraseña-registrarse-icono">
+                                <input id="password" class="input-password-registrarse" type="password" placeholder="password">
+                            </div>
+                            <div class="input-correo-registrarse-icono">
+                                <input id="correo" class="input-correo-registrarse" type="text" placeholder="Correo electrónico">
+                            </div>
+                            <div class="input-contraseña-registrarse-icono">
+                                <select id="tipo" name="tipo">
+                                    <option value="seleccione">Seleccione</option>
+                                    <option value="natural">Natural</option>
+                                    <option value="juridica">Juridica</option>
+                                </select>
+                            </div>
+                            <a href="../index.html"><button class="btn-registrarse" type="submit">Registrar</button></a>
+                        </div>
+                    </form>
+                    <div class="a-registrar-registrarse">
+                        <a href="#" class="olvido-contrasena">Olvidé mi contraseña</a>
+                        <a href="http://127.0.0.1:5500/html/registrar.html" class="registrarse">Regístrarse</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        
+        <script src="/javaScript/eventosCss/iniciarSesion/carruselIniciarSesion.js"></script>
+        <script src="/javaScript/controladores/registrarse.js" ></script>
 
 </body>
+
 </html>
