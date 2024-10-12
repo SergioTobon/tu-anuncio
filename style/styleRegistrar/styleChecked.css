@@ -1,0 +1,43 @@
+form {
+    position: relative; /* Necesario para que el check se posicione relativo al formulario */
+    display: flex; /* Usar flexbox para centrar elementos */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+    height: 350px; /* Ajusta la altura según tu diseño */
+}
+
+.inputs-registrarse {
+    display: flex; /* Usar flexbox para el contenedor de inputs */
+    flex-direction: column; /* Coloca los inputs en columna */
+    align-items: center; /* Centra los inputs horizontalmente */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho del formulario */
+}
+
+.check-container {
+    position: absolute; /* Posición absoluta para centrar el check */
+    left: 50%; /* Centra horizontalmente */
+    top: 40%; /* Ajusta este valor para mover el check hacia arriba o hacia abajo */
+    transform: translate(-50%, -50%); /* Ajusta para que esté en el centro exacto */
+    display: flex; /* Centra el contenido del check */
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.check-img {
+width: 50px; /* Tamaño inicial de 50px */
+opacity: 0; /* Inicialmente invisible */
+    transform: scale(0); /* Inicialmente en tamaño 0 */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición para la opacidad y el crecimiento */
+}
+
+.check-show {
+    opacity: 1; /* Cambia la opacidad a 1 */
+    transform: scale(4); /* Escala de 50px a 200px (50px * 4 = 200px) */
+}
+
+.check-hide {
+    opacity: 0; /* Hacerlo invisible */
+    transform: scale(0); /* Volver a su tamaño original (50px) */
+}

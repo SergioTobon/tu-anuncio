@@ -2,12 +2,23 @@ body {
     padding: 0;
     margin: 0;
     background-color: #151515;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Kanit", sans-serif;
     height: 100vh; /* Altura completa de la ventana */
 }
 
+.form-login{
+    height: 400px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .h2-iniciar-sesion {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Kanit", sans-serif;
     color: #ffffff;
     font-size: 40px;
 }
@@ -64,8 +75,8 @@ body {
 }
 
 
-.input-correo-iniciar-sesion,
-.input-contraseña-iniciar-sesion {
+.input-correo-login,
+.input-password-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,19 +92,19 @@ body {
     padding: 10px;
 }
 
-.input-correo-iniciar-sesion::placeholder , .input-contraseña-iniciar-sesion::placeholder{
+.input-correo-login::placeholder , .input-password-login::placeholder{
     color: #cacaca;
 
 }
 
 .btn-iniciar-sesion {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Kanit", sans-serif;
     border: none;
     width: 200px;
-    height: 40px;
+    height: 50px;
     color: #ffffff;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 20px;
     background-color: #1e1e1e;
     cursor: pointer;
 }
@@ -148,9 +159,18 @@ body {
     object-fit: cover; /* Mantiene la proporción de la imagen y cubre el contenedor */
 }
 
+.header-iniciar-sesiona:hover{
+    background-color: #151515;
 
+}
 
-
+.btn_ini_sesion_headerr{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded",function() {
 
-    const formulario = this.getElementById("formulario-registrar");
+    const formulario = document.getElementById("formulario-registrar");
 
     formulario.addEventListener('submit', function(event){
         
         event.preventDefault();
 
-        const nombre = document.getElementById("nombre").value;
-        const password = document.getElementById("password").value;
-        const correo = document.getElementById("correo").value;
-        const tipo = document.getElementById("tipo").value;
+        const registerNombre = document.getElementById("registerNombre").value;
+        const registerPassword = document.getElementById("registerPassword").value;
+        const registerCorreo = document.getElementById("registerCorreo").value;
+        const registerTipo = document.getElementById("registerTipo").value;
         
 
         const usuarios = {
-            username: nombre,
-            password: password,
-            email: correo,
-            tipo: tipo
+            username: registerNombre,
+            password: registerPassword,
+            email: registerCorreo,
+            tipo: registerTipo
         };
 
         console.log("Datos registrados: " , usuarios);

@@ -1,0 +1,22 @@
+.div_ini_sesion_header{
+    width: 510px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+.btn_ini_sesion_header{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_ini_sesion_header:hover{
+    background-color: #252525;
+}
+.header-iniciar-sesion:hover{
+    color: #0dff00;
+}

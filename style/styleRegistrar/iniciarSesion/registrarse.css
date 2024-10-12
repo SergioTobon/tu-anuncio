@@ -2,14 +2,14 @@ body {
     padding: 0;
     margin: 0;
     background-color: #151515;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Kanit", sans-serif;
     height: 100vh; /* Altura completa de la ventana */
 }
 
 .h2-registrarse {
     padding: 0%;
     margin: 0%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Kanit", sans-serif;
     color: #ffffff;
     font-size: 40px;
 }
@@ -46,8 +46,10 @@ body {
     align-items: center;
 }
 
-.input-correo-registrarse,
-.input-contraseña-registrarse {
+.input-username-sigin-in,
+.input-password-sigin-in,
+.input-email-sigin-in,
+.select-sigin-in {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,13 +65,26 @@ body {
     padding: 10px;
 }
 
-.input-correo-registrarse::placeholder , .input-contraseña-registrarse::placeholder{
+.select-sigin-in{
+    width: 320px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.input-email-sigin-in::placeholder , .input-password-sigin-in::placeholder, .input-username-sigin-in::placeholder{
     color: #cacaca;
 
 }
 
 .btn-registrarse {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Kanit", sans-serif;
     border: none;
     width: 200px;
     height: 40px;
@@ -86,7 +101,7 @@ body {
     color: #0dff00;
 }
 
-.input-correo-registrarse-icono, .input-contraseña-registrarse-icono{
+.input-correo-sigin-in-icono, .input-contraseña-registrarse-icono{
     width: 100%;
     display: flex;
     justify-content: center;
