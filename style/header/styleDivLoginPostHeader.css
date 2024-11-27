@@ -1,0 +1,10 @@
+.div-login-post-header{
+    width: 480px;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+
+}

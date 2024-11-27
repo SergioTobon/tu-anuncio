@@ -1,0 +1,23 @@
+.name-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    padding: 0;
+    margin: 0%;
+}
+
+.h1-name-header{
+    font-family: "Kanit", sans-serif;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.h1-name-header:hover{
+    font-size: 41px;
+}

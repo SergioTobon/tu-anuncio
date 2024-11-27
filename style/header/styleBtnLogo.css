@@ -1,0 +1,25 @@
+.logo-header{
+    display: flex;
+    height: 50%;
+    margin-left: 40px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.btn-logo{
+    font-size: 15px;
+    background-color: rgba(0, 128, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-family: "Kanit", sans-serif;
+    all: unset; 
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn-logo a{
+    color: #00BE00;
+
+}

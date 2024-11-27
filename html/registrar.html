@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="/style/styleRegistrar/iniciarSesion/inciarSesion.css">
     <link rel="stylesheet" href="/style/styleBtnLogin.css">
 
+    <!-- links de estilos para el header -->
+    <link rel="stylesheet" href="/style/header/btnPostHeader.css">
+    <link rel="stylesheet" href="/style/styleHeaderOff/styleBtnLoginHeaderOff.css">
+    <link rel="stylesheet" href="/style/styleHeaderOff/styleDivLoginPostHeaderOff.css">
+    <link rel="stylesheet" href="/style/header/styleDivLogoNameHeader.css">
+    <link rel="stylesheet" href="/style/header/styleBtnLogo.css">
+    <link rel="stylesheet" href="/style/header/styleNameHeader.css">
+    <!-- links de estilos para el header -->
+
     <!-- Fin links de estilos CSS -->
 
 </head>
@@ -23,20 +32,21 @@
     <section class="contenido-principal">
 
         <header class="header_principal">
-            <div class="div_logo_header">
-                <div class="logo_header">
-                    <button class="btn_logo"><a href="http://127.0.0.1:5500/index.html#">logo</a></button>
+            <div class="div-logo-name-header">
+                <div class="logo-header">
+                    <button class="btn-logo"><a href="/index.html">A.A</a></button>
                 </div>
-                <div class="name_header">
-                    <h1 class="h1_anuncio_header"><a href="http://127.0.0.1:5500/index.html#">TuAnuncio</a></h1>
-                </div>
+                <div class="name-header">
+                    <h1 class="h1-name-header"><a href="/index.html">Anuncielo Ahi</a></h1>
+                </div>       
             </div>
-            <div class="div_ini_sesion_header">
-                <div class="btn_publicar_header">
-                    <button class="btn_publicar"><a href="#">Publicar</a></button>
+            <div class="div-login-post-header">
+                <div class="btn-post-header">
+                    <button class="btn-post"><a href="#">Publicar</a></button>
+                    <img class="icono-post" src="/iconos/post.png" alt="">
                 </div>
-                <div class="btn_ini_sesion_header">
-                    <a href="/html/login.html" target="_blank" class="header-iniciar-sesion">Iniciar Sesión</a>
+                <div class="btn-login-header"> 
+                    <a href="/html/login.html" class="a-login-header">Iniciar Sesión</a>
                 </div>
             </div>
         </header>
@@ -55,7 +65,7 @@
                         <div class="inputs-registrarse">
                             <input id="registerNombre" class="input-username-sigin-in" name="username-sigin-in" required type="text" placeholder="Nombre" autocomplete="off">
                             <input id="registerPassword" class="input-password-sigin-in" name="password-sigin-in" required type="password" placeholder="Contraseña" autocomplete="current-password">
-                            <input id="registerCorreo" class="input-email-sigin-in" name="email-sigin-in" required type="text" placeholder="Correo electrónico" autocomplete="off">
+                            <input id="registerCorreo" class="input-email-sigin-in" name="email-sigin-in" required type="email" placeholder="Correo electrónico" autocomplete="off">
                             <select id="registerTipo" name="tipo" class="select-sigin-in">
                                 <option value="seleccione">Seleccione</option>
                                 <option value="natural">Natural</option>

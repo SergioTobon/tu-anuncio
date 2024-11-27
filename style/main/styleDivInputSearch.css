@@ -1,0 +1,15 @@
+.input-search{
+    width: 400px;
+    height: 74px;
+    font-size: 24px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    font-family: "Kanit", sans-serif;
+}
+
+
+.div-input-search{
+    width: 400px;
+    height: 100%;
+}

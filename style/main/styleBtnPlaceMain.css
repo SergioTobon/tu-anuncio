@@ -1,0 +1,34 @@
+.div-place-main{
+    width: 180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border-radius: 0 50px 50px 0;
+}
+
+.div-place-main:hover {
+    background-color: #242424; /* Cambia el color al pasar el mouse */
+}
+
+.img-icon-gps{
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-place{
+    margin-right: 10px;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    font-family: "Kanit", sans-serif;
+}
+
+.div-icon-gps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

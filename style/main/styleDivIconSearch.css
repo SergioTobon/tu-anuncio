@@ -1,0 +1,20 @@
+.div-icon-search{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+    border-radius: 50px 0 0 50px;
+
+}
+
+.div-icon-search:hover {
+    background-color: #242424; /* Cambia el color al pasar el mouse */
+}
+
+.img-icon-search{
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}

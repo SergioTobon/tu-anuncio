@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded",function() {
 
-
-
     const formulario = document.getElementById("form-login");
 
     formulario.addEventListener('submit', async function(event){

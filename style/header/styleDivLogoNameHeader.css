@@ -1,0 +1,9 @@
+.div-logo-name-header{
+    color: #ffffff;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;    
+}

@@ -1,0 +1,38 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.business-info h3 {
+    color: #333;
+    margin-top: 15px;
+}
+
+.business-info p,
+.business-info ul {
+    margin-left: 20px;
+}
+
+.business-info ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.business-contact a,
+.business-social a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.business-contact a:hover,
+.business-social a:hover {
+    text-decoration: underline;
+}

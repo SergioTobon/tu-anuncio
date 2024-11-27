@@ -1,0 +1,14 @@
+.btn-login-header {
+    height: 100%;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    cursor: pointer; 
+    
+}
+
+.btn-login-header:hover {
+    background-color: #252525; /* Color al hacer hover */
+}

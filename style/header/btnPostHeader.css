@@ -1,0 +1,36 @@
+.btn-post-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    color: #ffffff;
+    font-size: 30px;
+    transition: background-color 0.5s ease;
+    
+}
+
+.btn-post-header:hover{
+    background-color: #252525;
+}
+
+.btn-post{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-family: "Kanit", sans-serif;
+    all: unset; 
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-left: 20px; 
+    
+}
+
+.icono-post{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}

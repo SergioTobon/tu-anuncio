@@ -1,0 +1,24 @@
+.star-rating {
+    margin: 0%;
+    direction: rtl; /* Cambia la dirección para que las estrellas se seleccionen de derecha a izquierda */
+    display: inline-block;
+}
+
+.star-rating input {
+    display: none; /* Oculta los botones de radio */
+}
+
+.star-rating label {
+    font-size: 40px;
+    color: #f5c518; /* Amarillo siempre */
+    cursor: pointer;
+}
+
+.star-rating input:checked ~ label {
+    color: #f5c518; /* Mantén el color amarillo cuando se seleccionen */
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #f5c518; /* Evita el cambio de color al pasar el mouse */
+}
