@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded",function() {
         const validacion = await loginUser(usuarioLogin);
 
         if (validacion.success) {
-            window.location.href = "/html/indexLoginOn.html"; // Redirige si la validación es exitosa
+            window.location.href = "../index.html"; // Redirige si la validación es exitosa
         } else {
             alert(validacion.message); // Muestra mensaje de error
         }
