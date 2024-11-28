@@ -1,0 +1,20 @@
+1. organizar estructura de carpeta de imagenes
+
+    -negocios
+        -[idNegocio]
+            -publicaciones
+                -[idPublicacion].jpg
+            -foto-negocio.jpg
+    -Categorias
+        -[idCategoria].jpg
+
+2. crear la tabla imaganes
+
+
+Tareas del Backend
+    3.1 Crear servicio para guardar imagen en la base de datos y luego guardarla en el file storage
+    3.2 Crear servicio para consultar imagenes en la base de datos
+Tareas del Fronend
+    4.1 Consumir servicio de consultar imagen a la api
+    4.2 Ir por la imagen por el file storage
+    4.3 consumir servicio de guardar imagen a la api
