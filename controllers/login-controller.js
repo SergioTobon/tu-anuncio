@@ -1,12 +1,14 @@
 // controllers/login-controller.js
 import LoginService from "../services/login-service.js";
 
-const loginService = new LoginService();
+
 
 export const loginUser = async (req, res) => {
-    const login = req.body;
+
 
     try {
+        const login = req.body;
+        const loginService = new LoginService();
         const result = await loginService.authenticateUser(login);
 
         if (result.success) {
