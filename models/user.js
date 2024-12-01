@@ -3,6 +3,5 @@ export class User{
     username;
     email;
     password;
-    tipo;
     membresia;
 }

@@ -22,10 +22,6 @@ class UserService{
         if(user.email == null){
             throw new Error('Email is required');
         }
-        if(user.tipo == null){
-            throw new Error('Tipo is required');
-        }
-
         const membresia = await this.membresiaRepository.consultarMembresia(free)
         user.membresia = membresia.id;
 
