@@ -1,0 +1,143 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #151515;
+    font-family: "Kanit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-shadow: #151515;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: 835px;
+}
+
+.header-principal{
+    padding: 0%;
+    margin: 0%;
+    z-index: 4;
+    width: 100%;
+    height: 70px;
+    background-color: #151515;  
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 10px 10px 15px 5px rgba(55, 55, 55, 0.12)
+}
+
+.div-info-publicity {
+    width: 600px;
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), 0 6px 6px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+.name-company {
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.data-company p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.img-info-publicity {
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), 0 6px 6px rgba(0, 0, 0, 0.45);
+}
+
+.rating {
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 24px;
+    color: #f5c518;
+}
+
+.btn-contact {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #037ce6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #025ba8;
+}
+
+h3{
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.div-grid-info-publicity {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;  /* Ajusta la altura según lo que necesites */
+    overflow-y: auto;  /* Habilita el scroll vertical */
+    overflow-x: hidden; /* Elimina el scroll horizontal */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    width: 100%;
+    box-sizing: border-box;  /* Asegura que el padding no afecte el ancho total */
+}
+
+.grid-item {
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), 0 6px 6px rgba(0, 0, 0, 0.45);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    height: 300px;  /* Ajusta la altura de cada cuadro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento horizontal */
+    background-color: #151515;  
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Suaviza la transición */
+}
+
+/* Efecto hover en cada grid-item */
+.grid-item:hover {
+    transform: scale(1.05); /* Hace que el cuadro crezca un poco */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 1); /* Aumenta la sombra al pasar el mouse */
+    background-color: #151515;  
+}

@@ -31,8 +31,7 @@ function createUser(user) {
             // Vaciar los campos del formulario
             document.getElementById("registerNombre").value = "";
             document.getElementById("registerPassword").value = "";
-            document.getElementById("registerCorreo").value = "";
-            document.getElementById("registerTipo").value = "seleccione"; // Restablecer el valor del select
+            document.getElementById("registerCorreo").value = "";// Restablecer el valor del select
 
             // Mostrar el check si el registro fue exitoso
             const checkContainer = document.querySelector('.check-container');
