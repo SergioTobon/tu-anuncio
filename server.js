@@ -13,10 +13,6 @@ app.use(cors());
 
 // Configuraciones adicionales
 app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: true })); // Para parsear formularios
-
-// Configuración de sesiones
-
 
 // Definir las rutas
 app.use('/api/usuarios', userRoutes); // Base URL para las rutas de usuarios
