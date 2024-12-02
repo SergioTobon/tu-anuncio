@@ -1,6 +1,7 @@
 import upload from '../utilis/multer-config.js';
 import { saveImagenNegocio,saveImagenAnuncio} from '../services/filemanager-service.js';
 import NegocioService from '../services/negocio-service.js';
+import AnuncioService from '../services/anuncio-service.js';
 
 export const uploadImage = (req, res) => {
     upload.single('imagen')(req, res, async (err) => {
@@ -24,10 +25,14 @@ export const uploadImage = (req, res) => {
             });
         }
 
-        //validar existencia del negocio con metodo de Yoiner 
+       
+        
 
         try {
-            // Mover el archivo a htdocs/anuncios y eliminar el original
+
+            const negocioService = new NegocioService();
+            await negocioService.validarNegocio(idNegocio);
+
                 let finalPath;
             
             if (tipoImagen == "negocio") {
@@ -35,7 +40,10 @@ export const uploadImage = (req, res) => {
                 finalPath = await saveImagenNegocio(filePath,idNegocio);
                 await negocioService.updateUrlImagenNeogocio(idNegocio,finalPath);
             }else if(tipoImagen == "anuncio"){
+                const anuncioService = new AnuncioService()
+                await anuncioService.validarAnuncio(idAnuncio);
                 finalPath = await saveImagenAnuncio(filePath,idNegocio,idAnuncio);
+                await anuncioService.updateUrlImagenAnuncio(idAnuncio,finalPath);
             }
 
             return res.status(200).json({

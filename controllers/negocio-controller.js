@@ -19,7 +19,7 @@ export const validarNegocio = async (req, res )=> {
         const negocioService = new NegocioService();
     
         await negocioService.validarNegocio(id);
-        res.status(201).json({ message: "Negocio creado exitosamente" });
+        res.status(200).json({ message: "Negocio si existe" });
     } catch (error) {
         res.status(500).json({ error: error.message });
         

@@ -56,5 +56,6 @@ class NegocioRepository {
         }
     }
     
+
 }
 export default NegocioRepository;
