@@ -1,3 +1,4 @@
+// config/multer-config.js
 import multer from 'multer';
 import path from 'path';
 
