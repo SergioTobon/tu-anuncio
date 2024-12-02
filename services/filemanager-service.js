@@ -25,6 +25,8 @@ export const saveImagenEnXampp = async (sourcePath,rutaRelativa,fileName) => {
     try {
         // Mover el archivo a la carpeta destino
         await fs.promises.rename(sourcePath, targetPath);
+        // Borrar el archivo temporal de la carpeta 'uploads'
+        await fs.promises.unlink(sourcePath); // Eliminar archivo temporal
         return targetPath; // Retornar la ruta del archivo en su ubicación final
     } catch (error) {
         console.error('Error moviendo el archivo:', error);

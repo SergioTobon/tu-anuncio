@@ -31,11 +31,7 @@ class NegocioRepository {
         } catch (error) {
             console.error("Error al consultar el negocio:", error.message);
             throw error;
-        } finally {
-            if (connection) {
-                await this.database.close(); // Cerramos la conexión
-            }
-        }
+        } 
     }
 /** UPDATE anuncios-db.negocio SET urlImagenes='sss' WHERE id=1; */
     async updateUrlImagenNeogocio(id, urlImagenes){
@@ -51,8 +47,6 @@ class NegocioRepository {
             console.error("Error al actualizar la URL del negocio", error.message);
             throw error;
             
-        }finally{
-            await this.database.close();
         }
     }
     

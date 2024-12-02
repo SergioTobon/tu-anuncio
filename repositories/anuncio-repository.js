@@ -17,9 +17,7 @@ class AnuncioRepository {
         } catch (error) {
             console.error("Error al agregar anuncio:", error.message);
             throw error;
-        } finally {
-            await this.database.close();
-        }
+        } 
     }
 
         //valida si el negocio existe
@@ -32,11 +30,7 @@ class AnuncioRepository {
             } catch (error) {
                 console.error("Error al consultar el negocio:", error.message);
                 throw error;
-            } finally {
-                if (connection) {
-                    await this.database.close(); // Cerramos la conexión
-                }
-            }
+            } 
         }
 
         async updateUrlImagenAnuncio(id, urlImagenes){
@@ -52,8 +46,6 @@ class AnuncioRepository {
                 console.error("Error al actualizar la URL del anuncio", error.message);
                 throw error;
                 
-            }finally{
-                await this.database.close();
             }
         }
 
