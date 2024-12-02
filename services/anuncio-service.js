@@ -1,16 +1,20 @@
 import AnuncioRepository from '../repositories/anuncio-repository.js';
+import NegocioService from '../services/negocio-service.js';
 
 class AnuncioService{    
     constructor(){
         this.anuncioRepository = new AnuncioRepository();
+        this.NegocioService = new NegocioService();
     }
 
     async createAnuncio(anuncio) {
+
+        this.NegocioService.validarNegocio(idNegocio)
+        
         // Validar que el nombre sea válido
         if (!anuncio.nombre || !anuncio.nombre.trim()) {
             throw new Error('El nombre del anuncio es obligatorio y no puede estar vacío.');
         }
-    
         // Validar que el precio sea válido
         if (anuncio.precio == null || anuncio.precio === '') {
             throw new Error('El precio del anuncio es obligatorio.');

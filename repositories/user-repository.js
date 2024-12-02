@@ -23,6 +23,23 @@ class UserRepository {
       await this.database.close();
     }
   }
+  async obtenerUsuarioPorId(id) {
+    let connection;
+    try {
+        connection = await this.database.connect(); // Conectamos a la base de datos
+        const [rows] = await connection.query("SELECT * FROM usuario WHERE id = ?", [id]);
+        return rows; // Retornamos el resultado de la consulta
+    } catch (error) {
+        console.error("Error al consultar el usuario:", error.message);
+        throw error;
+    } finally {
+        if (connection) {
+            await this.database.close(); // Cerramos la conexión
+        }
+    }
+}
+
+
 }
 
 export default UserRepository;

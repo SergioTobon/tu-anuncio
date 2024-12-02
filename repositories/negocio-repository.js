@@ -21,5 +21,22 @@ class NegocioRepository {
             await this.database.close();
         }
     }
+    //valida si el negocio existe
+    async obtenerNegocioPorId(id) {
+        let connection;
+        try {
+            connection = await this.database.connect(); // Conectamos a la base de datos
+            const [rows] = await connection.query("SELECT * FROM negocio WHERE id = ?", [id]);
+            return rows; // Retornamos el resultado de la consulta
+        } catch (error) {
+            console.error("Error al consultar el negocio:", error.message);
+            throw error;
+        } finally {
+            if (connection) {
+                await this.database.close(); // Cerramos la conexión
+            }
+        }
+    }
+    
 }
 export default NegocioRepository;
