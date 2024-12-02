@@ -19,9 +19,7 @@ class UserRepository {
     } catch (error) {
       console.error("Error al agregar usuario:", error.message);
       throw error;
-    } finally {
-      await this.database.close();
-    }
+    } 
   }
   async obtenerUsuarioPorId(id) {
     let connection;
@@ -32,11 +30,7 @@ class UserRepository {
     } catch (error) {
         console.error("Error al consultar el usuario:", error.message);
         throw error;
-    } finally {
-        if (connection) {
-            await this.database.close(); // Cerramos la conexión
-        }
-    }
+    } 
 }
 
 

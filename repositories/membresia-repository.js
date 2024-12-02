@@ -34,9 +34,8 @@ class MembresiaRepository {
     } catch (error) {
         console.error("Error al consultar membresía:", error.message);
         throw error;
-    } finally {
-        await this.database.close();
-        }
+    } 
+    
     }
 }
 

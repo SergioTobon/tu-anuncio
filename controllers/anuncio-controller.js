@@ -11,5 +11,17 @@ export const createAnuncio = async (req, res)=> {
         res.status(500).json({ error: error.message });
         
     }
-    
+};
+
+    export const validarAnuncio = async (req, res )=> {
+        try {
+            const id = req.body;
+            const anuncioService = new AnuncioService();
+        
+            await anuncioService.validarAnuncio(id);
+            res.status(200).json({ message: "Anuncio si existe" });
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+            
+        }   
 };

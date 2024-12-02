@@ -34,6 +34,39 @@ class AnuncioService{
         // Si pasa todas las validaciones, crea el anuncio
         await this.anuncioRepository.createAnuncio(anuncio);
     }
+
+    async validarAnuncio(id) {
+        try {
+            // Validar que el ID no sea nulo ni vacío
+            if (!id || isNaN(id) || id <= 0) {
+                throw new Error("El ID del anuncio debe ser un número válido mayor que cero.");
+            }
+
+            const anuncio = await this.anuncioRepository.obtenerAnuncioPorId(id);
+
+            // Validar si se encontró el negocio
+            if (anuncio.length === 0) {
+                throw new Error(`No se encontró un anuncio con el ID ${id}.`);
+            }
+
+            return anuncio[0]; // Retornamos el negocio encontrado
+        } catch (error) {
+            console.error("Error al validar el anuncio:", error.message);
+            throw error;
+        }
+    }
+
+    async updateUrlImagenAnuncio(id, urlImagenes){
+        try {
+            const resultado = await this.anuncioRepository.obtenerAnuncioPorId(id,urlImagenes);
+            console.log("URL del Anuncio ID${id} actualizada correctamente");
+            return{message: "URL actualizada exitosamente" ,resultado};
+        } catch (error) {
+            console.log("Error en el servicio de la actualizacio",error.message); 
+            throw error;                     
+        }       
+    }
+
     
 
 }

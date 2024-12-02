@@ -15,9 +15,7 @@ class CategoriaRepository {
         } catch (error) {
             console.error("Error al obtener categorías:", error.message);  // Manejo de errores
             throw error;
-        } finally {
-            await this.database.close();  // Cerramos la conexión
-        }
+        } 
     }
 
     // Método para obtener una categoría por ID
@@ -30,11 +28,7 @@ class CategoriaRepository {
         } catch (error) {
             console.error("Error al consultar la categoría:", error.message);
             throw error;
-        } finally {
-            if (connection) {
-                await this.database.close(); // Cerramos la conexión
-            }
-        }
+        } 
     }
     
 

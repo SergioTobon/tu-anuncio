@@ -18,9 +18,6 @@ class LoginRepository {
         } catch (error) {
             console.error("Error al validar usuario:", error.message);
             throw error;
-        } finally {
-            console.log("voy a cerrar la connection");
-            await this.database.close();
         }
     }
 }
