@@ -1,5 +1,6 @@
 import upload from '../utilis/multer-config.js';
 import { saveImagenNegocio,saveImagenAnuncio} from '../services/filemanager-service.js';
+import NegocioService from '../services/negocio-service.js';
 
 export const uploadImage = (req, res) => {
     upload.single('imagen')(req, res, async (err) => {
@@ -30,7 +31,9 @@ export const uploadImage = (req, res) => {
                 let finalPath;
             
             if (tipoImagen == "negocio") {
+                const negocioService = new NegocioService();
                 finalPath = await saveImagenNegocio(filePath,idNegocio);
+                await negocioService.updateUrlImagenNeogocio(idNegocio,finalPath);
             }else if(tipoImagen == "anuncio"){
                 finalPath = await saveImagenAnuncio(filePath,idNegocio,idAnuncio);
             }

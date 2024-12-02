@@ -37,6 +37,24 @@ class NegocioRepository {
             }
         }
     }
+/** UPDATE anuncios-db.negocio SET urlImagenes='sss' WHERE id=1; */
+    async updateUrlImagenNeogocio(id, urlImagenes){
+        let connection;
+        try{
+            connection = await this.database.connect();
+            const result = await connection.query(
+                "UPDATE negocio SET urlImagenes = ? WHERE id = ? ",
+                [urlImagenes , id]
+            );
+            return result;
+        }catch(error){
+            console.error("Error al actualizar la URL del negocio", error.message);
+            throw error;
+            
+        }finally{
+            await this.database.close();
+        }
+    }
     
 }
 export default NegocioRepository;

@@ -45,5 +45,17 @@ class NegocioService {
         }
     }
 
+    async updateUrlImagenNeogocio(id, urlImagenes){
+        try {
+            const resultado = await this.NegocioRepository.updateUrlImagenNeogocio(id, urlImagenes);
+
+            console.log("URL del negocio ID${id} actualizada correctamente");
+            return{message: "URL actualizada exitosamente" ,resultado};
+        } catch (error) {
+            console.log("Error en el servicio de la actualizacio",error.message); 
+            throw error;                     
+        }       
+    }
+
 }
 export default NegocioService;
