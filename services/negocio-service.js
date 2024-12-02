@@ -1,21 +1,24 @@
 import NegocioRepository from '../repositories/negocio-repository.js';
 
-class NegocioService{
+class NegocioService {
 
-    constructor(){
-        this.NegocioRepository= new NegocioRepository();
+    constructor() {
+        this.NegocioRepository = new NegocioRepository();
     }
-    async createNegocio(negocio){
+    async createNegocio(negocio) {
 
-        if(negocio.nombre == null){
-            throw new Error('Nombre del negocio is required');
+        if (!negocio.nombre || !negocio.nombre.trim()) {
+            throw new Error('El nombre del negocio es obligatorio y no puede estar vacío o contener solo espacios.');
         }
-        if(negocio.idUsuario == null){
-            throw new Error('usuario del negocio is required');
+
+        if (!negocio.idUsuario || isNaN(negocio.idUsuario) || negocio.idUsuario <= 0) {
+            throw new Error('El ID del usuario es obligatorio, debe ser un número válido y mayor que cero.');
         }
-        if(negocio.idCategoria == null){
-            throw new Error('categoria del negocio is required');
+
+        if (!negocio.idCategoria || isNaN(negocio.idCategoria) || negocio.idCategoria <= 0) {
+            throw new Error('El ID de la categoría es obligatorio, debe ser un número válido y mayor que cero.');
         }
+
         this.NegocioRepository.createNegocio(negocio)
     }
 }

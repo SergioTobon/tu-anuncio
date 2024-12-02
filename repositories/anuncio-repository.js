@@ -1,25 +1,25 @@
 import Database from "../db/connection.js";  // Importamos la conexión a la base de datos
 
-class NegocioRepository {
+class AnuncioRepository {
     constructor() {
         this.database = new Database();  // Inicializamos la conexión
     }
 
-    async createNegocio(negocio) {
+    async createAnuncio(anuncio) {
         let connection;
         try {
             connection = await this.database.connect();// Conectamos a la base de datos
             const result = await connection.query(
-                "INSERT INTO negocio (nombre, descripcion, contacto, ubicacion, idCategoria, idUsuario, urlImagenes) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                [negocio.nombre, negocio.descripcion, negocio.contacto, negocio.ubicacion, negocio.idCategoria, negocio.idUsuario, negocio.urlImagenes]
+                "INSERT INTO anuncio (nombre, descripcion, precio, idNegocio, urlImagenes) VALUES (?, ?, ?, ?, ?)",
+                [anuncio.nombre, anuncio.descripcion, anuncio.precio, anuncio.idNegocio, anuncio.urlImagenes]
             );
             return result;
         } catch (error) {
-            console.error("Error al agregar negocio:", error.message);
+            console.error("Error al agregar anuncio:", error.message);
             throw error;
         } finally {
             await this.database.close();
         }
     }
 }
-export default NegocioRepository;
+export default AnuncioRepository;
