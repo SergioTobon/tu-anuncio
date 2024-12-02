@@ -1,11 +1,10 @@
-import { User } from '../models/user.js';
 import UserRepository from '../repositories/user-repository.js';
 import MembresiaRepository from '../repositories/membresia-repository.js';
 import { free } from '../utilis/constants.js';
 
 class UserService{    
     constructor(){
-        this.userRepository = new UserRepository();
+        this.UserRepository = new UserRepository();
         this.membresiaRepository = new MembresiaRepository();
     }
 
@@ -29,9 +28,27 @@ class UserService{
 
     }
 
+    async validarUser(id) {
+        try {
+            // Validar que el ID no sea nulo ni vacío
+            if (!id || isNaN(id) || id <= 0) {
+                throw new Error("El ID de usuario debe ser un número válido mayor que cero.");
+            }
     
+            const usuarios = await this.UserRepository.obtenerUsuarioPorId(id)
     
-
+            // Validar si se encontró el usuario
+            if (usuarios.length === 0) {
+                throw new Error(`No se encontró un usuario con el ID ${id}.`);
+            }
+    
+            return usuarios[0]; // Retornamos el usuario encontrado
+        } catch (error) {
+            console.error("Error al validar el usuario:", error.message);
+            throw error;
+        }
+    }
+    
 }
 
 export default UserService;
