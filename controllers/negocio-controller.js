@@ -5,8 +5,12 @@ export const createNegocio = async (req, res)=> {
         const negocio = req.body;
         const negocioService = new NegocioService();
     
-        await negocioService.createNegocio(negocio);
-        res.status(201).json({ message: "Negocio creado exitosamente" });
+        const result = await negocioService.createNegocio(negocio);
+        if (result.success) {
+            return res.status(201).json(result);
+        } else {
+            return res.status(401).json(result);
+        }
     } catch (error) {
         res.status(500).json({ error: error.message });
         
