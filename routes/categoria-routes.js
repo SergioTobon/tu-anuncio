@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAllCategories, getCategoryByNombre} from '../controllers/categoria-controller.js';  // Importamos los controladores
+import { getAllCategories, getCategoryById} from '../controllers/categoria-controller.js';  // Importamos los controladores
 
 const router = express.Router();
 
@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', getAllCategories);
 
 // Ruta para obtener una categoría por su nombre
-router.get('/:nombre', getCategoryByNombre);
+router.get('/:id', getCategoryById);
 
 
 export default router;

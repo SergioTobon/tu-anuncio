@@ -13,12 +13,12 @@ export const getAllCategories = async (req, res) => {
 };
 
 // Controlador para obtener una categoría por ID
-export const getCategoryByNombre = async (req, res) => {
+export const getCategoryById = async (req, res) => {
      // Instanciamos el servicio
     const categoriaService = new CategoriaService(); 
-    const { nombre } = req.params;  // Obtenemos el ID desde los parámetros de la URL
+    const { id } = req.params;  // Obtenemos el ID desde los parámetros de la URL
     try {
-        const category = await categoriaService.getCategoryByNombre(nombre);  // Llamamos al servicio
+        const category = await categoriaService.validarCategoriaPorId(id);  // Llamamos al servicio
         if (category) {
             return res.status(200).json(category);  // Retornamos la categoría si existe
         } else {
