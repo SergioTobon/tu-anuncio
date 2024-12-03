@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,33 +66,28 @@
             <form id="business-form" class="form" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="business-name" class="form-label">Nombre del negocio:</label>
-                    <input type="text" id="business-name" name="business-name" class="form-input" required>
+                    <input type="text" id="business-name" name="business-name" class="form-input">
                 </div>
                 
                 <div class="form-group">
                     <label for="business-description" class="form-label">Descripción del negocio:</label>
-                    <textarea id="business-description" name="business-description" class="form-input" rows="4" required></textarea>
+                    <textarea id="business-description" name="business-description" class="form-input" rows="1"></textarea>
                 </div>
         
                 <div class="form-group">
                     <label for="business-category" class="form-label">Categoría del negocio:</label>
-                    <select id="business-category" name="business-category" class="form-select" required>
-                        <option value="alimentos">Alimentos</option>
-                        <option value="ropa">Ropa</option>
-                        <option value="tecnologia">Tecnología</option>
-                        <option value="salud">Salud</option>
-                        <option value="otros">Otros</option>
+                    <select id="business-category" name="business-category" class="form-select" >
                     </select>
                 </div>
     
                 <div class="form-group">
                     <label for="phone-number" class="form-label">Número de Teléfono:</label>
-                    <input type="tel" id="phone-number" name="phone-number" class="form-input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <input type="tel" id="phone-number" name="phone-number" class="form-input" >
                 </div>
     
                 <div class="form-group">
                     <label for="business-location" class="form-label">Ubicación del negocio:</label>
-                    <input type="text" id="business-location" name="business-location" class="form-input" required>
+                    <input type="text" id="business-location" name="business-location" class="form-input">
                 </div>
         
                 <div class="form-group">
@@ -108,13 +103,10 @@
 
 </body>
     <!-- inicio de links de javaScript -->
-    <script src="/javaScript/eventosCss/btnCategoria/btnCategoria.js"></script> 
-    <script src="/javaScript/eventosCss/btnLugar/btnLugar.js"></script>
-    <script src="javaScript/eventosCss/carruselDestacados/carrusel.js"></script>
-    <script src="javaScript/eventosCss/carruselDestacados/starRaitingHighlighted.js"></script>
-    <script src="javaScript/components/carruselCategories.js"></script>
-    <script src="javaScript/components/carruselDestacados.js"></script>
-    <script src="/javaScript/createPublicity/scriptFormCreatePublicity.js"></script>
-    
+    <script src="/javaScript/utils/localStorageManager.js"></script>
+    <script src="/javaScript/api/get-categories.js" ></script>
+    <script src="/javaScript/api/create-negocio.js"></script>
+    <script src="/javaScript/controladores/create-negocio.js"></script>
+    <script src="/javaScript/controladores/get-categories.js" ></script>
     <!-- fin de links de javaScript -->
 </html>

@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded",function() {
         const validacion = await loginUser(usuarioLogin);
 
         if (validacion.success) {
+            const {id} = validacion.user;
+            saveField('usuario', id);
             window.location.href = "../index.html"; // Redirige si la validación es exitosa
         } else {
             alert(validacion.message); // Muestra mensaje de error
@@ -27,3 +29,4 @@ document.addEventListener("DOMContentLoaded",function() {
     });
 
 });
+

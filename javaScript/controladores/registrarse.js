@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",function() {
 
     const formulario = document.getElementById("formulario-registrar");
 
-    formulario.addEventListener('submit', function(event){
+    formulario.addEventListener('submit', async function(event){
         
         event.preventDefault();
 
@@ -17,7 +17,16 @@ document.addEventListener("DOMContentLoaded",function() {
         };
 
         console.log("Datos registrados: " , usuarios);
-        createUser(usuarios);
+        const validacion = await createUser(usuarios);
+
+        console.log(validacion);
+        
+
+        if (validacion.success) {
+            window.location.href = "/html/login.html";
+        }else{
+            alert(validacion.message); 
+        }
         
     });
 

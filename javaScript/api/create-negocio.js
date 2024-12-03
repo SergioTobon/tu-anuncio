@@ -1,18 +1,18 @@
-const url = 'http://localhost:3000/api/usuarios/create-user';
+const url2 = 'http://localhost:3000/api/negocio/create-negocio';
 
-async function createUser(user) {
-
+async function createNegocio(negocio) {
+    // Convertimos los datos a JSON
     const opciones = {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json' // Indicamos que el cuerpo es JSON
         },
-        body: JSON.stringify(user) // Convertimos el objeto a un string JSON
+        body: JSON.stringify(negocio) // Convertimos el objeto a un string JSON
     };
 
-     // Hacemos la solicitud POST con fetch
-     try {
-        const response = await fetch(url, opciones); // Esperamos la respuesta del fetch
+    // Hacemos la solicitud POST con fetch
+    try {
+        const response = await fetch(url2, opciones); // Esperamos la respuesta del fetch
         if (!response.ok) {
             throw new Error('Error en la solicitud');
         }
@@ -20,7 +20,6 @@ async function createUser(user) {
         return data; // Devolvemos la respuesta del servidor
     } catch (error) {
         console.error('Error:', error);
-        return { success: false, message: 'Error al crear el usuario' }; // En caso de error
+        return { success: false, message: 'Email o contraseña incorrectos' }; // En caso de error
     }
 }
-   
