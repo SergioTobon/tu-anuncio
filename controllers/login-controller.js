@@ -10,6 +10,10 @@ export const loginUser = async (req, res) => {
         const login = req.body;
         const loginService = new LoginService();
         const result = await loginService.authenticateUser(login);
+        console.log("============controler======");
+        
+        console.log(result);
+        
 
         if (result.success) {
             return res.status(200).json(result);
@@ -18,5 +22,5 @@ export const loginUser = async (req, res) => {
         }
     } catch (error) {
         return res.status(500).json({ success: false, message: error.message });
-    }
+    }z
 };

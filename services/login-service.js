@@ -13,6 +13,10 @@ class LoginService {
 
         const user = await this.loginRepository.validationUser(login);
 
+        console.log("=============================");
+        
+        console.log(user);
+        
         if (user) {
             return { success: true, message: "Login exitoso", user };
         } else {

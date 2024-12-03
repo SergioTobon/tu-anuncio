@@ -19,11 +19,11 @@ class CategoriaRepository {
     }
 
     // Método para obtener una categoría por ID
-    async obtenerCategoriaPorId(id) {
+    async obtenerCategoriaPorNombre(nombre) {
         let connection;
         try {
             connection = await this.database.connect(); // Conectamos a la base de datos
-            const [rows] = await connection.query("SELECT * FROM categoria WHERE id = ?", [id]);
+            const [rows] = await connection.query("SELECT * FROM categoria WHERE nombre = ?", [nombre]);
             return rows; // Retornamos el resultado de la consulta
         } catch (error) {
             console.error("Error al consultar la categoría:", error.message);
@@ -31,7 +31,6 @@ class CategoriaRepository {
         } 
     }
     
-
 }
 
 export default CategoriaRepository;

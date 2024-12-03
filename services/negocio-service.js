@@ -12,14 +12,9 @@ class NegocioService {
     async createNegocio(negocio) {
 
         await this.UserServices.validarUser(negocio.idUsuario)
-        await this.CategoriaService.validarCategoria(negocio.idCategoria)
 
         if (!negocio.nombre || !negocio.nombre.trim()) {
             throw new Error('El nombre del negocio es obligatorio y no puede estar vacío o contener solo espacios.');
-        }
-
-        if (!negocio.idCategoria || isNaN(negocio.idCategoria) || negocio.idCategoria <= 0) {
-            throw new Error('El ID de la categoría es obligatorio, debe ser un número válido y mayor que cero.');
         }
         this.NegocioRepository.createNegocio(negocio)
     }

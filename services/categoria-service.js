@@ -11,18 +11,14 @@ class CategoriaService {
     }
 
     // Método para obtener una categoría por su nombre
-    async validarCategoriaPorId(id) {
+    async validarCategoriaPorNombre(nombre) {
         try {
-            // Validar que el ID no sea nulo ni vacío
-            if (!id || isNaN(id) || id <= 0) {
-                throw new Error("El ID de categoría debe ser un número válido mayor que cero.");
-            }
     
-            const categorias = await this.categoriaRepository.obtenerCategoriaPorId(id);
+            const categorias = await this.categoriaRepository.obtenerCategoriaPorNombre(nombre);
     
             // Validar si se encontró la categoría
             if (categorias.length === 0) {
-                throw new Error(`No se encontró una categoría con el ID ${id}.`);
+                throw new Error(`No se encontró una categoría con el nombre ${nombre}.`);
             }
     
             return categorias[0]; // Retornamos la categoría encontrada
