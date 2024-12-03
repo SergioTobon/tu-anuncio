@@ -20,6 +20,6 @@ async function createNegocio(negocio) {
         return data; // Devolvemos la respuesta del servidor
     } catch (error) {
         console.error('Error:', error);
-        return { success: false, message: 'Email o contraseña incorrectos' }; // En caso de error
+        return { success: false, message: 'Error al crear el negocio' }; // En caso de error
     }
 }
