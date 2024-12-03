@@ -24,7 +24,23 @@ class UserService{
         const membresia = await this.membresiaRepository.consultarMembresia(free)
         user.membresia = membresia.id;
 
-        this.userRepository.createUser(user)
+        console.log("User para crear" + user);
+        
+        console.log(user);
+        
+
+        const result = await this.UserRepository.createUser(user)
+
+        console.log(result);
+        
+        if (result) {
+            console.log("entro por el if");
+            
+            return { success: true, message: "usuario creado", result};
+        } else {
+            console.log("entro por el else");
+            return { success: false, message: "Email o contraseña incorrectos" };
+        }
 
     }
 

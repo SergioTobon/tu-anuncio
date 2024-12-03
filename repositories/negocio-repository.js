@@ -17,9 +17,8 @@ class NegocioRepository {
         } catch (error) {
             console.error("Error al agregar negocio:", error.message);
             throw error;
-        } finally {
-            await this.database.close();
         }
+        
     }
     //valida si el negocio existe
     async obtenerNegocioPorId(id) {

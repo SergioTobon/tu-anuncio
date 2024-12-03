@@ -14,6 +14,9 @@ class LoginRepository {
                 "SELECT * FROM usuario WHERE email = ? AND password = ?",
                 [login.email, login.password]
             );
+            
+            console.log(rows);
+            
             return rows.length > 0 ? rows[0] : null; // Retorna el usuario si existe
         } catch (error) {
             console.error("Error al validar usuario:", error.message);

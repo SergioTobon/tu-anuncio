@@ -7,11 +7,14 @@ export const createUser = async (req, res) => {
         const user = req.body;
         const userService = new UserService();
     
-        await userService.createUser(user);
-        res.status(201).json({ message: "Usuario creado exitosamente" });
+        const resultado = await userService.createUser(user);
+        if (resultado.success) {
+            return res.status(201).json(resultado);
+        } else {
+            return res.status(401).json(resultado);
+        }
     } catch (error) {
-        res.status(500).json({ error: error.message });
-        
+        return res.status(500).json({ success: false, message: error.message });
     }
 };
 
