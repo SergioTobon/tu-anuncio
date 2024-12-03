@@ -11,7 +11,7 @@ class CategoriaService {
     }
 
     // Método para obtener una categoría por su nombre
-    async validarCategoria(id) {
+    async validarCategoriaPorId(id) {
         try {
             // Validar que el ID no sea nulo ni vacío
             if (!id || isNaN(id) || id <= 0) {
