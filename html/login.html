@@ -22,10 +22,7 @@
     <!-- links de estilos para el header -->
 </head>
 <body>
-
-    <section class="contenido-principal">
-        <section class="contenido-principal">
-            
+           
             <header class="header_principal">
                 <div class="div-logo-name-header">
                     <div class="logo-header">
@@ -35,18 +32,9 @@
                         <h1 class="h1-name-header"><a href="/index.html">Anuncielo Ahi</a></h1>
                     </div>       
                 </div>
-                <div class="div-login-post-header">
-                    <div class="btn-login-header"> 
-                        <a href="/html/registrar.html" class="a-login-header">Registrarse</a>
-                    </div>
-                </div>
             </header>
 
-            <div class="contenido-imagenes">
-                <div class="contenido-imagenes">
-                    <div class="carrusel"></div>
-                </div>                 
-            </div>
+            <section class="contenido-principal">
 
             <div class="contenido-iniciar-sesion"> 
                 <div class="panel-contenido-iniciar-sesion">
@@ -60,7 +48,7 @@
                             <input id="passwordLogin" class="input-password-login" name="email-login" autocomplete="off" type="password" placeholder="***********">
                             <img id="togglePassword" class="img-contraseña-iniciar-sesion" src="/iconos/ocultar-contraseña.png" alt="Mostrar contraseña" style="cursor: pointer;">
                         </div>
-                            <button class="btn-iniciar-sesion" type="submit">Iniciar Sesión</button>
+                            <button class="btn-iniciar-sesion" type="submit" >Iniciar Sesión</button>
                             <div class="inputs-iniciar-sesion">
                                 <div class="a-registrar-iniciar-sesion">
                                     <a href="#" class="olvido-contrasena">Olvidé mi contraseña</a>
@@ -74,8 +62,8 @@
             </div>
     </section>
 
+    <script src="/javaScript/components/validarSesion.js"></script>
     <script src="/javaScript/utils/localStorageManager.js" ></script>
-    <script src="/javaScript/eventosCss/iniciarSesion/carruselIniciarSesion.js"></script>
     <script src="/javaScript/api/login-user.js"></script>  <!-- Para probar contra API -->
     <script src="/javaScript/controladores/iniciar-sesion.js"></script>
     <script src="/javaScript/eventosCss/togglePassword.js"></script>

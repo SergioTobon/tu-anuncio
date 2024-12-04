@@ -45,7 +45,6 @@ function generarCarrusel() {
         `;
     }
     sliderBox.innerHTML = htmlContent;
-    console.log(htmlContent);
 }
 
 generarCarrusel();

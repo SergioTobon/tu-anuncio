@@ -27,3 +27,12 @@
             return false;
         }
     }
+
+    function deleteField(key) {
+        try {
+            localStorage.removeItem(key);
+            console.log(`Campo eliminado: ${key}`);
+        } catch (error) {
+            console.error(`Error eliminando el campo "${key}":`, error);
+        }
+    }
