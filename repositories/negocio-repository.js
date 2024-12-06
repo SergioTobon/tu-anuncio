@@ -32,6 +32,19 @@ class NegocioRepository {
             throw error;
         } 
     }
+
+    async getNegocioByIdUsuario(idUsuario) {
+        let connection;
+        try {
+            connection = await this.database.connect(); // Conectamos a la base de datos
+            const [rows] = await connection.query("SELECT * FROM negocio WHERE idUsuario = ?", [idUsuario]);
+            return rows; // Retornamos el resultado de la consulta
+        } catch (error) {
+            console.error("Error al consultar el negocio:", error.message);
+            throw error;
+        } 
+    }
+
 /** UPDATE anuncios-db.negocio SET urlImagenes='sss' WHERE id=1; */
     async updateUrlImagenNeogocio(id, urlImagenes){
         let connection;
