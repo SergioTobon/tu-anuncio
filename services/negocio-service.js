@@ -16,7 +16,13 @@ class NegocioService {
         if (!negocio.nombre || !negocio.nombre.trim()) {
             throw new Error('El nombre del negocio es obligatorio y no puede estar vacío o contener solo espacios.');
         }
-        this.NegocioRepository.createNegocio(negocio)
+        const validarNegocio = this.NegocioRepository.createNegocio(negocio)
+
+        if (validarNegocio) {
+            return { success: true, message: "Negocio creado correctamente", validarNegocio };
+        } else {
+            return { success: false, message: "Error al crear el negocio" };
+        }
     }
 
     async validarNegocio(id) {

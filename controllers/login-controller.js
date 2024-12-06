@@ -13,14 +13,13 @@ export const loginUser = async (req, res) => {
         console.log("============controler======");
         
         console.log(result);
-        
-
-        if (result.success) {
-            return res.status(200).json(result);
+    
+        if (result.success) {       
+            return res.status(201).json(result);
         } else {
             return res.status(401).json(result);
         }
     } catch (error) {
         return res.status(500).json({ success: false, message: error.message });
-    }z
+        }
 };
