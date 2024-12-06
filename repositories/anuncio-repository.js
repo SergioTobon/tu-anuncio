@@ -10,8 +10,8 @@ class AnuncioRepository {
         try {
             connection = await this.database.connect();// Conectamos a la base de datos
             const result = await connection.query(
-                "INSERT INTO anuncio (nombre, descripcion, precio, idNegocio, urlImagenes) VALUES (?, ?, ?, ?, ?)",
-                [anuncio.nombre, anuncio.descripcion, anuncio.precio, anuncio.idNegocio, anuncio.urlImagenes]
+                "INSERT INTO anuncio (nombre ,precio, idNegocio, urlImagenes) VALUES (?, ?, ?, ? )",
+                [anuncio.nombre,anuncio.precio, anuncio.idNegocio, anuncio.urlImagenes]
             );
             return result;
         } catch (error) {
@@ -49,5 +49,18 @@ class AnuncioRepository {
             }
         }
 
+        async getAnuncioByIdNegocio(idNegocio) {
+            console.log("ID Negocio recibido:", idNegocio);
+
+            let connection;
+            try {
+                connection = await this.database.connect(); // Conectamos a la base de datos
+                const [rows] = await connection.query("SELECT * FROM anuncio WHERE idNegocio = ?", [idNegocio]);
+                return rows; // Retornamos el resultado de la consulta
+            } catch (error) {
+                console.error("Error al consultar el negocio:", error.message);
+                throw error;
+            } 
+        }
 }
 export default AnuncioRepository;
