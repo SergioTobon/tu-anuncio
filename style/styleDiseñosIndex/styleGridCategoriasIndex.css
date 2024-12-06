@@ -1,0 +1,55 @@
+.grid-container-index {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid; /* Activa el sistema de grid */
+    grid-template-columns: repeat(5, 1fr); /* Crea 5 columnas de igual tamaño */
+    gap: 30px; /* Espacio entre los contenedores */
+}
+
+.grid-item {
+    background-color: #151515;  
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.85), 0 6px 6px rgba(0, 0, 0, 0.85); /* Nuevo box-shadow */
+    position: relative; /* Necesario para la posición absoluta del texto */
+    overflow: hidden; /* Evita que las imágenes se desborden */
+}
+
+.grid-item img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: 100%; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Hace que la imagen cubra todo el contenedor sin distorsionarse */
+}
+
+.category-name {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 10px; /* Espacio desde la parte superior del contenedor */
+    left: 50%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Ajusta el texto para que quede completamente centrado */
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el texto */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.title-grid-index {
+    padding: 0%;
+    margin: 30px;
+    align-items: center;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Hace que el cuadro crezca un poco */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 1); /* Aumenta la sombra al pasar el mouse */
+    background-color: #151515;  
+}

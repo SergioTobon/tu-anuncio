@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/header/header.css">
-    <link rel="stylesheet" href="/style/header/btnPostHeader.css">
-    <link rel="stylesheet" href="/style/header/styleDivLoginPostHeader.css">
-    <link rel="stylesheet" href="/style/header/styleBtnLoginHeader.css">
-    <link rel="stylesheet" href="/style/header/styleDivLogoNameHeader.css">
-    <link rel="stylesheet" href="/style/header/styleBtnLogo.css">
-    <link rel="stylesheet" href="/style/header/styleNameHeader.css">
+    <!-- style header index -->
+    <link rel="stylesheet" href="/style/styleDiseñosIndex/style-header.css">
+    <!-- style header index -->
+    <!-- style barra busqueda index-->
     <link rel="stylesheet" href="/style/imgStylel/style-img-login.css">
     <link rel="stylesheet" href="/style/styleInfoPublicity/styledivInfoPublicity.css">
     <link rel="stylesheet" href="/style/imgStylel/style-img-login.css">
@@ -17,30 +14,35 @@
 </head>
 <body>
 
-    <header class="header-principal">
-        <div class="div-logo-name-header">
-            <div class="logo-header">
-                <button class="btn-logo"><a href="/html/indexLoginOn.html">A.A</a></button>
+    <header class="header-index">
+        <div class="div-logo-index">
+            <div class="logo-index">
+                <button class="btn-logo"><a href="/index.html" class="btn-logo-index">A.A</a></button>
             </div>
             <div class="name-header">
-                <h1 class="h1-name-header"><a href="/html/indexLoginOn.html">Anuncielo Ahi</a></h1>
+                <h1 class="h1-name-header"><a href="/index.html">Anuncielo Ahi</a></h1>
             </div>       
         </div>
-        <div class="div-login-post-header">
-            <div class="btn-post-header">
-                <button class="btn-post"><a href="/html/categoryPublicity.html">Publicar</a></button>
-                <img class="icono-post" src="/iconos/post.png" alt="">
+        <div class="div-login-index">
+            <div class="btn-post-index">
+                <button id="crear-negocio" style="display: none;" class="btn-post"><a href="/html/create-negocio.html">CREAR NEGOCIO</a></button>
+                <img id="icono-crear-negocio" class="icono-post-index" src="/iconos/post.png" alt="">
             </div>
-            <div class="btn-login-header"> 
-                <a href="/html/infoUserFree.html"><img class="img-login" src="http://localhost/imagenes-anuncios/17.png" alt=""></a>
+            <div class="btn-login-index"> 
+                <button id="iniciar-sesion" class="btn-login"><a href="/html/login.html">INICIAR SESION</a></button>
+                <button id="cerrar-sesion" class="btn-login" onclick="cerrarSesion()"><a href="/index.html">CERRAR SESION</a></button>
             </div>
         </div>
     </header>
 
     <main>
         <div class="div-info-publicity">
-            <a href="/html/infoPublicity.html">
-                <img class="img-info-publicity" src="http://localhost/imagenes-anuncios/1.jpg" alt="Imagen publicitaria de PANADERIA WITOS">
+            <a href="/html/infoPublicity.html" class="a-imagen-negocio">
+                <div class="div-imagen-negocio">
+                    <input type="file" class="input-imagen-negocio">
+                    <button onclick="guardarImagenNegocio()">Guardar foto</button>
+                    <img class="img-info-publicity" src="" alt="Imagen publicitaria de PANADERIA WITOS" style="display: none;">
+                </div>                
             </a>
             <h2 class="name-company">PANADERIA WITOS</h2>
             <div class="data-company">
@@ -71,6 +73,8 @@
 
 
 </body>
-
+<script src="/javaScript/utils/localStorageManager.js"></script>
+<script src="/javaScript/api/login-user.js"></script>
+<script src="/javaScript/controladores/cerrar-sesion.js"></script>
 <script src="/javaScript/components/gridPublication.js"></script>
 </html>

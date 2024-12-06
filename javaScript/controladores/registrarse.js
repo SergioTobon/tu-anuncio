@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded",function() {
         if (validacion.success) {
             window.location.href = "/html/login.html";
         }else{
+            
             alert(validacion.message); 
         }
         

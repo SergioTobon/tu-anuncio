@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/api/categorias';
+const url0 = 'http://localhost:3000/api/categorias';
 
 async function getCategories() {
     // Convertimos los datos a JSON
@@ -12,7 +12,7 @@ async function getCategories() {
 
     // Hacemos la solicitud POST con fetch
     try {
-        const response = await fetch(url, opciones); // Esperamos la respuesta del fetch
+        const response = await fetch(url0, opciones); // Esperamos la respuesta del fetch
         if (!response.ok) {
             throw new Error('Error en la solicitud');
         }
@@ -36,7 +36,7 @@ async function getNombreCategoria(nombre) {
 
     // Hacemos la solicitud POST con fetch
     try {
-        const response = await fetch(url, opciones); // Esperamos la respuesta del fetch
+        const response = await fetch(url0, opciones); // Esperamos la respuesta del fetch
         if (!response.ok) {
             throw new Error('Error en la solicitud');
         }

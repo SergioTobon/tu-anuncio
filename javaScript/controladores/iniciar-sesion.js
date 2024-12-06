@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded",function() {
 
         const correoLogin = document.getElementById("correoLogin").value;
         const passwordLogin = document.getElementById("passwordLogin").value;
-
-
         const usuarioLogin = {
             email: correoLogin,
             password: passwordLogin
@@ -20,8 +18,11 @@ document.addEventListener("DOMContentLoaded",function() {
         const validacion = await loginUser(usuarioLogin);
 
         if (validacion.success) {
-            const {id} = validacion.user;
+            const validacionTrue = true;
+            const {id} = validacion.user;          
             saveField('usuario', id);
+            saveField('iniciar sesion', validacionTrue);
+            console.log("INICIA SESION")
             window.location.href = "../index.html"; // Redirige si la validación es exitosa
         } else {
             alert(validacion.message); // Muestra mensaje de error
