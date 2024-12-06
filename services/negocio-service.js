@@ -40,6 +40,11 @@ class NegocioService {
         }
     }
 
+    async getNegocioByIdUsuarioService(idUsuario) {
+        return await this.NegocioRepository.getNegocioByIdUsuario(idUsuario)
+    }
+
+
     async updateUrlImagenNeogocio(id, urlImagenes){
         try {
             const resultado = await this.NegocioRepository.updateUrlImagenNeogocio(id, urlImagenes);
