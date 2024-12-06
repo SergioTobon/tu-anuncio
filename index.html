@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
 
 
 </head>
+
 <body>
     <header class="header-index">
         <div class="div-logo-index">
@@ -27,14 +29,19 @@
             </div>
             <div class="name-header">
                 <h1 class="h1-name-header"><a href="/html/indexLoginOn.html">Anuncielo Ahi</a></h1>
-            </div>       
+            </div>
         </div>
-        <div class="div-login-index">
+
+        <select id="mis-negocios" class="form-select-negocio" style="display: none;">
+        </select>
+
+        <div class="div-login-index">             
             <div class="btn-post-index">
-                <button id="crear-negocio" style="display: none;" class="btn-post"><a href="/html/categoryPublicity.html">CREAR NEGOCIO</a></button>
+                <button id="crear-negocio" style="display: none;" class="btn-post"><a
+                        href="/html/create-negocio.html">CREAR NEGOCIO</a></button>
                 <img id="icono-crear-negocio" class="icono-post-index" src="/iconos/post.png" alt="">
             </div>
-            <div class="btn-login-index"> 
+            <div class="btn-login-index">
                 <button id="iniciar-sesion" class="btn-login"><a href="/html/login.html">INICIAR SESION</a></button>
                 <button id="cerrar-sesion" class="btn-login" onclick="cerrarSesion()"><a href="index.html">CERRAR SESION</a></button>
             </div>
@@ -44,49 +51,46 @@
     <div class="barra-busqueda">
         <div class="input-busqueda-index">
             <input type="text" placeholder="Buscar..." class="input-busqueda">
-            <button class="btn-buscar"><img src="/iconos/icono-buscar-verde.png" alt="" class="icono-buscar-index"></button>
+            <button class="btn-buscar"><img src="/iconos/icono-buscar-verde.png" alt=""
+                    class="icono-buscar-index"></button>
         </div>
-        <div class="categorias-index">
-            <button class="btn-categorias">TODAS LAS CATEGORIAS ▼</button>
-            <ul class="lista-categorias">
-                <li>Tecnología</li>
-                <li>Hogar</li>
-                <li>Deportes</li>
-                <li>Ropa</li>
-                <li>Alimentos</li>
-            </ul>
-        </div>
+        <select id="business-category" name="business-category" class="form-select-index"></select>
     </div>
 
     <div class="carrusel-destacados-index">
         <h2 class="title-slider">DESTACADOS DEL MES</h2>
         <div class="slider-box">
-            <ul id="slider-box">    
+            <ul id="slider-box">
             </ul>
         </div>
     </div>
-    
-    <div class="grid-container-index">    
+
+    <div class="grid-container-index">
         <h2 class="title-grid-index">CATEGORIAS</h2>
         <div class="grid-container"></div>
     </div>
 
     <script src="/javaScript/components/validarSesion.js"></script>
     <script src="/javaScript/utils/localStorageManager.js"></script>
-    <script src="/javaScript/controladores/iniciar-sesion.js"></script>
     <script src="/javaScript/api/login-user.js"></script>
     <script src="/javaScript/controladores/cerrar-sesion.js"></script>
-    <!-- archivos script barra busqueda index-->  
-     <script src="/javaScript/components/barrarBusquedaIndex.js"></script>
+    <script src="/javaScript/api/api-get-negocios.js"></script>
+    <script src="/javaScript/controladores/get-negocio.js"></script>
+    <script src="/javaScript/controladores/mis-negocios.js"></script>
+    <script src="/javaScript/api/get-categories.js"></script>
+    <script src="/javaScript/controladores/get-categories.js"></script>
+
+    <!-- archivos script barra busqueda index-->
     <!-- archivos script barra busqueda index-->
     <!-- scrip carrusel desctacados index-->
-     <script src="/javaScript/components/carruselDestacados.js"></script>
+    <script src="/javaScript/components/carruselDestacados.js"></script>
     <!-- scrip carrusel desctacados index-->
     <!-- scrip carrusel desctacados index-->
     <script src="/javaScript/components/gridCategoriasIndex.js"></script>
     <!-- scrip carrusel desctacados index-->
- 
+
 
 
 </body>
+
 </html>

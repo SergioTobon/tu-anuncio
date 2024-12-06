@@ -6,61 +6,48 @@
     <title>Iniciar Sesión</title>
 
     <!-- Inicio links de estilos CSS -->
-    <link rel="stylesheet" href="/style/styleRegistrar/iniciarSesion/registrarse.css">
-    <link rel="stylesheet" href="/style/header/header.css">
-    <link rel="stylesheet" href="/style/all/all.css">
-    <link rel="stylesheet" href="/style/styleRegistrar/iniciarSesion/inciarSesion.css">
-    <link rel="stylesheet" href="/style/styleBtnLogin.css">
+    <link rel="stylesheet" href="/style/styleIniciarSesion/style-iniciar-sesion.css">
     <!-- Fin links de estilos CSS -->
     <!-- links de estilos para el header -->
-    <link rel="stylesheet" href="/style/header/btnPostHeader.css">
-    <link rel="stylesheet" href="/style/styleHeaderOff/styleBtnLoginHeaderOff.css">
-    <link rel="stylesheet" href="/style/styleHeaderOff/styleDivLoginPostHeaderOff.css">
-    <link rel="stylesheet" href="/style/header/styleDivLogoNameHeader.css">
-    <link rel="stylesheet" href="/style/header/styleBtnLogo.css">
-    <link rel="stylesheet" href="/style/header/styleNameHeader.css">
+    <link rel="stylesheet" href="/style/styleDiseñosIndex/style-header.css">
     <!-- links de estilos para el header -->
 </head>
 <body>
            
-            <header class="header_principal">
-                <div class="div-logo-name-header">
-                    <div class="logo-header">
-                        <button class="btn-logo"><a href="/index.html">A.A</a></button>
-                    </div>
-                    <div class="name-header">
-                        <h1 class="h1-name-header"><a href="/index.html">Anuncielo Ahi</a></h1>
-                    </div>       
-                </div>
-            </header>
-
-            <section class="contenido-principal">
-
-            <div class="contenido-iniciar-sesion"> 
-                <div class="panel-contenido-iniciar-sesion">
-                    <form action="" id="form-login" class="form-login">
-                        <h2 class="h2-iniciar-sesion">Iniciar Sesion</h2>
-                        <div class="input-correo-iniciar-sesion-icono">
-                            <input id="correoLogin" class="input-correo-login" name="password-login" autocomplete="off" type="text" placeholder="Correo electrónico">
-                            <img class="img-correo-iniciar-sesion" src="/iconos/correo.png" alt="">
-                        </div>
-                        <div class="input-contraseña-iniciar-sesion-icono">
-                            <input id="passwordLogin" class="input-password-login" name="email-login" autocomplete="off" type="password" placeholder="***********">
-                            <img id="togglePassword" class="img-contraseña-iniciar-sesion" src="/iconos/ocultar-contraseña.png" alt="Mostrar contraseña" style="cursor: pointer;">
-                        </div>
-                            <button class="btn-iniciar-sesion" type="submit" >Iniciar Sesión</button>
-                            <div class="inputs-iniciar-sesion">
-                                <div class="a-registrar-iniciar-sesion">
-                                    <a href="#" class="olvido-contrasena">Olvidé mi contraseña</a>
-                                    <a href="/html/registrar.html" class="registrarse">Regístrate</a>
-                                </div>
-                            </div>
-                        </form>    
-                    </div>
-
-                </div>
+    <header class="header-index">
+        <div class="div-logo-index">
+            <div class="logo-index">
+                <button class="btn-logo"><a href="/html/indexLoginOn.html" class="btn-logo-index">A.A</a></button>
             </div>
-    </section>
+            <div class="name-header">
+                <h1 class="h1-name-header"><a href="/html/indexLoginOn.html">Anuncielo Ahi</a></h1>
+            </div>       
+        </div>
+    </header>
+
+    <div class="contenido-login"> 
+        <div class="panel-login">
+            <form action="" id="form-login" class="form-login">
+                <h2 class="h2-login">Iniciar Sesion</h2>
+                <div class="div-input-correo-login">
+                    <input id="correoLogin" class="input-correo-login" name="password-login" autocomplete="off" type="text" placeholder="Correo electrónico">
+                    <img class="img-correo-login" src="/iconos/correo.png" alt="">
+                </div>
+                <div class="div-input-password-login">
+                    <input id="passwordLogin" class="input-password-login" name="email-login" autocomplete="off" type="password" placeholder="***********">
+                    <img id="togglePassword" class="img-password-login" src="/iconos/ocultar-contraseña.png" alt="Mostrar contraseña" style="cursor: pointer;">
+                </div>
+                    <button class="btn-iniciar-sesion" type="submit" >Iniciar Sesión</button>
+                    <div class="inputs-iniciar-sesion">
+                        <div class="a-registrar-iniciar-sesion">
+                            <a href="#" class="olvido-contrasena">Olvidé mi contraseña</a>
+                            <a href="/html/registrar.html" class="registrarse">Regístrate</a>
+                        </div>
+                    </div>
+                </form>    
+            </div>
+        </div>
+
 
     <script src="/javaScript/components/validarSesion.js"></script>
     <script src="/javaScript/utils/localStorageManager.js" ></script>

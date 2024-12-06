@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=New+Amsterdam&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5acc70b5b4.js" crossorigin="anonymous"></script>
+
+    <!-- style header index -->
+    <link rel="stylesheet" href="/style/styleDiseñosIndex/style-header.css">
+    <!-- style header index -->
+    <link rel="stylesheet" href="/style/styleCrearNegocio/style-create-negocio.css">
+
+
+</head>
+
+<body>
+    <header class="header-index">
+        <div class="div-logo-index">
+            <div class="logo-index">
+                <button class="btn-logo"><a href="/html/indexLoginOn.html" class="btn-logo-index">A.A</a></button>
+            </div>
+            <div class="name-header">
+                <h1 class="h1-name-header"><a href="/html/indexLoginOn.html">Anuncielo Ahi</a></h1>
+            </div>
+        </div>
+        <div class="div-login-index">
+            <div class="btn-post-index">
+                <button id="crear-negocio" style="display: none;" class="btn-post"><a
+                        href="/html/create-negocio.html">CREAR NEGOCIO</a></button>
+                <img id="icono-crear-negocio" class="icono-post-index" src="/iconos/post.png" alt="">
+            </div>
+            <div class="btn-login-index">
+                <button id="iniciar-sesion" class="btn-login"><a href="/html/login.html">INICIAR SESION</a></button>
+                <button id="cerrar-sesion" class="btn-login" onclick="cerrarSesion()"><a href="index.html">CERRAR
+                        SESION</a></button>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="form-container">
+            <h1 class="form-title">Crear un nuevo negocio</h1>
+            <form id="business-form" class="form" enctype="multipart/form-data">
+                <div class="form-1">
+                    <div class="form-group" class="form-name-negocio">
+                        <label for="business-name" class="form-label">Nombre del negocio:</label>
+                        <input type="text" id="business-name" name="business-name" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="business-category" class="form-label">Categoría del negocio:</label>
+                        <select id="business-category" name="business-category" class="form-select"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="business-description" class="form-label">Descripción del negocio:</label>
+                        <textarea id="business-description" name="business-description" class="form-input-description"
+                            rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="form-2">
+                    <div class="form-group">
+                        <label for="phone-number" class="form-label">Número de Teléfono:</label>
+                        <input type="tel" id="phone-number" name="phone-number" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="business-location" class="form-label">Ubicación del negocio:</label>
+                        <input type="text" id="business-location" name="business-location" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="form-button">Crear negocio</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+<!-- inicio de links de javaScript -->
+<script src="/javaScript/api/api-get-negocios.js"></script>
+<script src="/javaScript/utils/localStorageManager.js"></script>
+<script src="/javaScript/api/get-categories.js"></script>
+<script src="/javaScript/api/create-negocio.js"></script>
+<script src="/javaScript/controladores/create-negocio.js"></script>
+<script src="/javaScript/controladores/get-categories.js"></script>
+<!-- fin de links de javaScript -->
+
+</html>

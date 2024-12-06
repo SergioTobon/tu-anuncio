@@ -106,3 +106,12 @@
 ul{
     color: #ffffff;
 }
+
+.form-select-index{
+    width: 150px;
+    background-color: #151515;
+    border: none;
+    color: #ffffff;
+    height: 50px;
+    font-size: 16px;
+}
