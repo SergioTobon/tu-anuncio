@@ -9,7 +9,7 @@ class AnuncioService{
 
     async createAnuncio(anuncio) {
 
-        this.NegocioService.validarNegocio(idNegocio)
+        this.NegocioService.validarNegocio(anuncio.idNegocio)
         
         // Validar que el nombre sea válido
         if (!anuncio.nombre || !anuncio.nombre.trim()) {
@@ -21,14 +21,6 @@ class AnuncioService{
         }
         if (isNaN(anuncio.precio) || anuncio.precio <= 0) {
             throw new Error('El precio del anuncio debe ser un número mayor que cero.');
-        }
-    
-        // Validar que la URL de la imagen sea válida
-        if (!anuncio.urlImagen || !anuncio.urlImagen.trim()) {
-            throw new Error('La URL de la imagen es obligatoria y no puede estar vacía.');
-        }
-        if (!/^https?:\/\/[^\s]+$/.test(anuncio.urlImagen.trim())) {
-            throw new Error('La URL de la imagen no es válida. Debe ser una URL completa (http o https).');
         }
     
         // Si pasa todas las validaciones, crea el anuncio
@@ -67,7 +59,9 @@ class AnuncioService{
         }       
     }
 
-    
+    async getAnuncioByIdNegocioService(idNegocio){
+        return await this.anuncioRepository.getAnuncioByIdNegocio(idNegocio)
+    } 
 
 }
 

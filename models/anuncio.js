@@ -1,9 +1,8 @@
 export class Anuncio {
-    constructor(id, nombre, descripcion, precio, idNegocio, urlImagenes) {
+    constructor(id, nombre,precio, idNegocio, urlImagenes) {
         this.id = id;
         this.nombre = nombre;
         this.urlImagenes = urlImagenes;
-        this.descripcion = descripcion;
         this.precio = precio;
         this.idNegocio = idNegocio;
     }
