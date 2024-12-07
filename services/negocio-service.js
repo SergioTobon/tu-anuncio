@@ -28,10 +28,7 @@ class NegocioService {
     async validarNegocio(id) {
         try {
             // Validar que el ID no sea nulo ni vacío
-            if (!id || isNaN(id) || id <= 0) {
-                throw new Error("El ID de negocio debe ser un número válido mayor que cero.");
-            }
-
+        
             const negocios = await this.NegocioRepository.obtenerNegocioPorId(id);
 
             // Validar si se encontró el negocio
