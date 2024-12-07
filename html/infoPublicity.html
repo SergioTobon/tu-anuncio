@@ -23,6 +23,10 @@
                 <h1 class="h1-name-header"><a href="/index.html">Anuncielo Ahi</a></h1>
             </div>       
         </div>
+
+        <select id="mis-negocios" class="form-select-negocio" style="display: none;">
+        </select>
+
         <div class="div-login-index">
             <div class="btn-post-index">
                 <button id="crear-negocio" style="display: none;" class="btn-post"><a href="/html/create-negocio.html">CREAR NEGOCIO</a></button>
@@ -37,47 +41,69 @@
 
     <main>
         <div class="div-info-publicity">
-            <a href="/html/infoPublicity.html" class="a-imagen-negocio">
                 <div class="div-imagen-negocio">
-                    <input type="file" class="input-imagen-negocio">
-                    <button onclick="guardarImagenNegocio()">Guardar foto</button>
-                    <img class="img-info-publicity" src="" alt="Imagen publicitaria de PANADERIA WITOS" style="display: none;">
+                    <input id="file-input" type="file" class="input-imagen-negocio">
+                    <button onclick="guardarImagenNegocio()" id="btn-guardar-image-negocio">Guardar foto</button>
+                    <img class="img-info-publicity" id="image-negocio" src="" alt="Imagen publicitaria de PANADERIA WITOS" style="display: none;">
                 </div>                
-            </a>
-            <h2 class="name-company">PANADERIA WITOS</h2>
+            <h2 class="name-company"></h2>
             <div class="data-company">
-                <p><strong>Ubicación:</strong> Calle 123 #45-67, Medellín, Antioquia</p>
-                <p><strong>Teléfono:</strong> +57 123 456 7890</p>
-                <p><strong>Email:</strong> contacto@panaderiawitos.com</p>
-                <p><strong>Categoria:</strong> Comida</p>
-                <p><strong>Descripción:</strong> Panadería artesanal con los mejores productos frescos y una tradición de sabor inigualable.</p>
-            </div>
-            <div class="rating">
-                <p>Calificación:</p>
-                <div class="stars">
-                    <span>&#9733;</span>
-                    <span>&#9733;</span>
-                    <span>&#9733;</span>
-                    <span>&#9733;</span>
-                    <span>&#9734;</span>
-                </div>
+                <p><strong>Ubicación:</strong></p>
+                <p><strong>Teléfono:</strong></p>
+                <p><strong>Categoria:</strong></p>
+                <p><strong>Descripción:</strong></p>
             </div>
         </div>
         <div class="div-grid-info-publicity">
-            <h3 class="h3-grid-publication">PUBLICACIONES</h3>
-            <div class="grid-container" id="grid-container">
-                <div class="grid-item">Publicación 1</div>
+            <div class="anuncio-tittle">
+                <h3 class="h3-grid-publication">PUBLICACIONES</h3>
+                <button onclick="createAnuncioForm()" class="btn-create-anuncio"><img src="/iconos/post.png" alt="" class="img-create-anuncio"></button>
             </div>
-        </div>
+
+            <!-- Modal para formulario -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="h2-crear-anuncio">Crear Nuevo Anuncio</h2>
+                    <form id="form-anuncio">
+                        <label for="nombre">Nombre del Anuncio:</label>
+                        <input type="text" id="nombre-anuncio" name="nombre" required>
+
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio-anuncio" name="precio" required>
+
+                        <label for="imagen">Imagen (URL):</label>
+                        <input id="file-image-anuncio" type="file" id="imagen-anuncio" name="imagen" required>
+                        <button type="submit" >Guardar Anuncio</button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div id="grid-anuncios" class="grid-anuncios"></div>             
+            </div>
     </main>
 
 
 </body>
 <script src="/javaScript/utils/localStorageManager.js"></script>
 <script src="/javaScript/api/login-user.js"></script>
-<script src="/javaScript/controladores/cerrar-sesion.js"></script>
-<script src="/javaScript/components/gridPublication.js"></script>
+
 <script src="/javaScript/api/get-url-negocio.js"></script>
 <script src="/javaScript/controladores/llenar-info-negocio.js"></script>
-<script src="/javaScript/controladores/get-info-negocio.js"></script>
-</html>
+
+<script src="/javaScript/api/api-get-anuncio.js"></script>
+<script src="/javaScript/controladores/mostrar-datos-anuncios.js"></script>
+
+<script src="/javaScript/controladores/cerrar-sesion.js"></script>
+
+<script src="/javaScript/api/upload-image.js"></script>
+<script src="/javaScript/controladores/guardar-imagen-negocio.js"></script>
+
+<script src="/javaScript/components/validarSesion.js"></script>
+<script src="/javaScript/controladores/create-anuncio.js"></script>
+<script src="/javaScript/api/create-anuncio.js"></script>
+<script src="/javaScript/api/api-get-negocios.js"></script>
+<script src="/javaScript/controladores/get-negocio.js"></script>
+<script src="/javaScript/controladores/mis-negocios.js"></script>
+<script src="/javaScript/components/crear-anuncio.js"></script>
+</html> 

@@ -1,4 +1,4 @@
-const url7 = 'http://localhost:3000/api/negocio';
+const url7 = 'http://localhost:3000/api/negocio/negocioId';
 // Función para obtener un negocio por su ID
 async function getNegocioPorId(idNegocio) {
     const url = `${url7}/${idNegocio}`;
@@ -20,8 +20,6 @@ async function getNegocioPorId(idNegocio) {
         return null;
     }
 }
-
-
 
 function getNegocioIdFromUrl() {
     const params = new URLSearchParams(window.location.search);

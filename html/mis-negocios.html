@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="/style/styleDiseñosIndex/style-header.css">
+<body>
+    <header class="header-index">
+        <div class="div-logo-index">
+            <div class="logo-index">
+                <button class="btn-logo"><a href="/index.html" class="btn-logo-index">A.A</a></button>
+            </div>
+            <div class="name-header">
+                <h1 class="h1-name-header"><a href="/index.html">Anuncielo Ahi</a></h1>
+            </div>
+        </div>
+
+        <select id="mis-negocios" class="form-select-negocio" style="display: none;">
+        </select>
+
+        <div class="div-login-index">             
+            <div class="btn-post-index">
+                <button id="crear-negocio" style="display: none;" class="btn-post"><a
+                        href="/html/create-negocio.html">CREAR NEGOCIO</a></button>
+                <img id="icono-crear-negocio" class="icono-post-index" src="/iconos/post.png" alt="">
+            </div>
+            <div class="btn-login-index">
+                <button id="iniciar-sesion" class="btn-login"><a href="/html/login.html">INICIAR SESION</a></button>
+                <button id="cerrar-sesion" class="btn-login" onclick="cerrarSesion()"><a href="/index.html">CERRAR SESION</a></button>
+            </div>
+        </div>
+    </header>
+
+    <script src="/javaScript/components/validarSesion.js"></script>
+    <script src="/javaScript/utils/localStorageManager.js"></script>
+    <script src="/javaScript/api/login-user.js"></script>
+    <script src="/javaScript/controladores/cerrar-sesion.js"></script>
+</body>
+</html>

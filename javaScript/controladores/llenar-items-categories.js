@@ -35,4 +35,4 @@ async function populateCategories() {
 }
 
 // Llenar el contenedor con las categorías al cargar la página
-populateCategories();
+populateCategories(); 

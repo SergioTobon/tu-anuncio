@@ -2,7 +2,6 @@
 async function llenarDatosNegocio() {
     const negocioId = getNegocioIdFromUrl(); // Obtiene el ID del negocio de la URL
     if (!negocioId) {
-        alert('No se proporcionó un ID de negocio válido');
         return;
     }
 
@@ -12,15 +11,22 @@ async function llenarDatosNegocio() {
         return;
     }
 
-    // Actualiza los elementos del DOM con los datos del negocio
+    if(negocio.urlImagenes != null){
+        mostrarImagen(negocio.urlImagenes);
+    }else{
+        ocultarImagen();
+    }
+
     document.querySelector('.name-company').textContent = negocio.nombre || 'Sin nombre';
     document.querySelector('.data-company').innerHTML = `
         <p><strong>Ubicación:</strong> ${negocio.ubicacion || 'Sin ubicación'}</p>
-        <p><strong>Teléfono:</strong> ${negocio.telefono || 'Sin teléfono'}</p>
-        <p><strong>Email:</strong> ${negocio.email || 'Sin email'}</p>
+        <p><strong>Teléfono:</strong> ${negocio.contacto || 'Sin teléfono'}</p>
         <p><strong>Categoría:</strong> ${negocio.categoria || 'Sin categoría'}</p>
         <p><strong>Descripción:</strong> ${negocio.descripcion || 'Sin descripción'}</p>
     `;
+
+    console.log(negocio);
+    
 }
 
 // Llama a la función al cargar la página
