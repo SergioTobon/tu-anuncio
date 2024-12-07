@@ -25,12 +25,29 @@ class NegocioRepository {
         let connection;
         try {
             connection = await this.database.connect(); // Conectamos a la base de datos
-            const [rows] = await connection.query("SELECT * FROM negocio WHERE id = ?", [id]);
+            const query = `
+                SELECT 
+                    negocio.id,
+                    negocio.nombre,
+                    negocio.descripcion,
+                    negocio.ubicacion,
+                    negocio.contacto,
+                    negocio.idUsuario,
+                    negocio.urlImagenes,
+                    categoria.nombre AS nombreCategoria
+                FROM 
+                    negocio
+                INNER JOIN 
+                    categoria ON negocio.idCategoria = categoria.id
+                WHERE 
+                    negocio.id = ?;
+            `;
+            const [rows] = await connection.query(query, [id]);
             return rows; // Retornamos el resultado de la consulta
         } catch (error) {
             console.error("Error al consultar el negocio:", error.message);
             throw error;
-        } 
+        }
     }
 
     async getNegocioByIdUsuario(idUsuario) {

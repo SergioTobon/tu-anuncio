@@ -7,6 +7,7 @@ import categoriaRoutes from './routes/categoria-routes.js';  // Importamos las r
 import imagenRoutes from './routes/imagen-routes.js';
 import negocioRoutes from './routes/negocio-routes.js';
 import anuncioRoutes from './routes/anuncio-routes.js';
+import busqueda from './routes/busqueda-routes.js';
 
 const app = express();
 const PORT = 3000;
@@ -25,6 +26,8 @@ app.use('/api/categorias', categoriaRoutes);
 app.use("/api/imagenes", imagenRoutes);
 app.use('/api/negocio', negocioRoutes);
 app.use('/api/anuncio', anuncioRoutes);
+app.use('/api/busqueda', busqueda);
+
 
 // Iniciar el servidor
 app.listen(PORT, () => {
