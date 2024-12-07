@@ -18,12 +18,17 @@ export const createNegocio = async (req, res) => {
 };
 
 export const validarNegocio = async (req, res) => {
+    debugger
     try {
-        const id = req.body;
+        const {id} = req.params;
         const negocioService = new NegocioService();
 
-        await negocioService.validarNegocio(id);
-        res.status(200).json({ message: "Negocio si existe" });
+        const negocio = await negocioService.validarNegocio(id);
+        if (negocio) {
+            return res.status(200).json(negocio); 
+        } else {
+            return res.status(404).json({ success: false, message: "anuncio no encontrado" });  // Error 404 si no existe
+        }
     } catch (error) {
         res.status(500).json({ error: error.message });
 

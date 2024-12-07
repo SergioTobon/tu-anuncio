@@ -25,9 +25,6 @@ export const uploadImage = (req, res) => {
             });
         }
 
-       
-        
-
         try {
 
             const negocioService = new NegocioService();

@@ -22,9 +22,22 @@ class AnuncioService{
         if (isNaN(anuncio.precio) || anuncio.precio <= 0) {
             throw new Error('El precio del anuncio debe ser un número mayor que cero.');
         }
-    
+        
         // Si pasa todas las validaciones, crea el anuncio
-        await this.anuncioRepository.createAnuncio(anuncio);
+        const idAnuncio = await this.anuncioRepository.createAnuncio(anuncio);
+        console.log(idAnuncio);
+
+        console.log(idAnuncio);
+        
+        if (idAnuncio) {
+            console.log("entro por el if");
+            
+            return { success: true, message: "anuncio creado", idAnuncio};
+        } else {
+            console.log("entro por el else");
+            return { success: false, message: "error al crear el anuncio" };
+        }
+            
     }
 
     async validarAnuncio(id) {
@@ -50,7 +63,7 @@ class AnuncioService{
 
     async updateUrlImagenAnuncio(id, urlImagenes){
         try {
-            const resultado = await this.anuncioRepository.obtenerAnuncioPorId(id,urlImagenes);
+            const resultado = await this.anuncioRepository.updateUrlImagenAnuncio(id,urlImagenes);
             console.log("URL del Anuncio ID${id} actualizada correctamente");
             return{message: "URL actualizada exitosamente" ,resultado};
         } catch (error) {

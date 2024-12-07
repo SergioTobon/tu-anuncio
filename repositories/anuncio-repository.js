@@ -9,11 +9,13 @@ class AnuncioRepository {
         let connection;
         try {
             connection = await this.database.connect();// Conectamos a la base de datos
-            const result = await connection.query(
+            const [result] = await connection.query(
                 "INSERT INTO anuncio (nombre ,precio, idNegocio, urlImagenes) VALUES (?, ?, ?, ? )",
                 [anuncio.nombre,anuncio.precio, anuncio.idNegocio, anuncio.urlImagenes]
             );
-            return result;
+            console.log(result);
+            
+            return result.insertId;
         } catch (error) {
             console.error("Error al agregar anuncio:", error.message);
             throw error;

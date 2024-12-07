@@ -6,7 +6,7 @@ import { getNegocioByIdUsuario } from '../controllers/negocio-controller.js';
 const router = express.Router();
 
 router.post('/create-negocio', createNegocio);
-router.post('/validar-negocio', validarNegocio);
+router.get('/negocioId/:id', validarNegocio);
 router.get('/:idUsuario', getNegocioByIdUsuario);
 
 export default router;
