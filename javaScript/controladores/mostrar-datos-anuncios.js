@@ -21,13 +21,12 @@ document.addEventListener('DOMContentLoaded', async function () {
             anuncioItem.innerHTML = `
                 <img src="${anuncio.urlImagenes}" />
                 <h4>${anuncio.nombre}</h4>
-                <p>$${anuncio.precio}</p>
+                <p class="">$${anuncio.precio}</p>
             `;
 
             // Añade el elemento al grid
             gridAnuncios.appendChild(anuncioItem);
         });
     } else {
-        alert('No se encontraron anuncios para este negocio');
     }
 });

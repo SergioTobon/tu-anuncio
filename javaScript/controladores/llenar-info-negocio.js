@@ -19,10 +19,10 @@ async function llenarDatosNegocio() {
 
     document.querySelector('.name-company').textContent = negocio.nombre || 'Sin nombre';
     document.querySelector('.data-company').innerHTML = `
-        <p><strong>Ubicación:</strong> ${negocio.ubicacion || 'Sin ubicación'}</p>
-        <p><strong>Teléfono:</strong> ${negocio.contacto || 'Sin teléfono'}</p>
-        <p><strong>Categoría:</strong> ${negocio.categoria || 'Sin categoría'}</p>
-        <p><strong>Descripción:</strong> ${negocio.descripcion || 'Sin descripción'}</p>
+        <p class="p-negocio"><strong>Ubicación:</strong> ${negocio.ubicacion || 'Sin ubicación'}</p>
+        <p class="p-negocio"><strong>Teléfono:</strong> ${negocio.contacto || 'Sin teléfono'}</p>
+        <p class="p-negocio"><strong>Categoría:</strong> ${negocio.nombreCategoria || 'Sin categoría'}</p>
+        <p class="p-negocio"><strong>Descripción:</strong> ${negocio.descripcion || 'Sin descripción'}</p>
     `;
 
     console.log(negocio);

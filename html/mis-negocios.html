@@ -7,6 +7,7 @@
 </head>
 
 <link rel="stylesheet" href="/style/styleDiseñosIndex/style-header.css">
+<link rel="stylesheet" href="/style/grid-mis-negocios.css">
 <body>
     <header class="header-index">
         <div class="div-logo-index">
@@ -21,7 +22,8 @@
         <select id="mis-negocios" class="form-select-negocio" style="display: none;">
         </select>
 
-        <div class="div-login-index">             
+        <div class="div-login-index">     
+            <button id="btn-mis-negocios" style="display: none;" class="btn-mis-negocios"><a href="/html/mis-negocios.html">MIS NEGOCIOS</a></button>           
             <div class="btn-post-index">
                 <button id="crear-negocio" style="display: none;" class="btn-post"><a
                         href="/html/create-negocio.html">CREAR NEGOCIO</a></button>
@@ -34,9 +36,17 @@
         </div>
     </header>
 
+    <div class="grid-mis-negocios">
+        <h3 class="tittle-mis-negocios">Mis Negocios</h3>
+        <div id="grid-negocios" class="grid-negocios"></div> <!-- Este es el contenedor del grid -->
+    </div>
+
     <script src="/javaScript/components/validarSesion.js"></script>
     <script src="/javaScript/utils/localStorageManager.js"></script>
     <script src="/javaScript/api/login-user.js"></script>
+    <script src="/javaScript/controladores/mis-negocios.js"></script>
     <script src="/javaScript/controladores/cerrar-sesion.js"></script>
+    <script src="/javaScript/api/api-mis-negocios.js"></script>
+    <script src="/javaScript/controladores/show-mis-negocios.js"></script>
 </body>
 </html>

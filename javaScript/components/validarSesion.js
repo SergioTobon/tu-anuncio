@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("crear-negocio").style.display = "block "; 
         document.getElementById("cerrar-sesion").style.display = "block "; 
         document.getElementById("icono-crear-negocio").style.display = "block";
-        document.getElementById("mis-negocios").style.display = "block";
+        document.getElementById("btn-mis-negocios").style.display="block";
     }    
 });

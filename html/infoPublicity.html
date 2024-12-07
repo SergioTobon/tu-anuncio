@@ -28,6 +28,7 @@
         </select>
 
         <div class="div-login-index">
+                      <button id="btn-mis-negocios" style="display: none;" class="btn-mis-negocios"><a href="/html/mis-negocios.html">MIS NEGOCIOS</a></button>   
             <div class="btn-post-index">
                 <button id="crear-negocio" style="display: none;" class="btn-post"><a href="/html/create-negocio.html">CREAR NEGOCIO</a></button>
                 <img id="icono-crear-negocio" class="icono-post-index" src="/iconos/post.png" alt="">
@@ -67,20 +68,22 @@
                     <h2 class="h2-crear-anuncio">Crear Nuevo Anuncio</h2>
                     <form id="form-anuncio">
                         <label for="nombre">Nombre del Anuncio:</label>
-                        <input type="text" id="nombre-anuncio" name="nombre" required>
+                        <input class="input-create-anuncio" type="text" id="nombre-anuncio" name="nombre" required>
 
                         <label for="precio">Precio:</label>
-                        <input type="number" id="precio-anuncio" name="precio" required>
+                        <input class="input-create-anuncio" type="number" id="precio-anuncio" name="precio" required>
 
                         <label for="imagen">Imagen (URL):</label>
-                        <input id="file-image-anuncio" type="file" id="imagen-anuncio" name="imagen" required>
-                        <button type="submit" >Guardar Anuncio</button>
+                        <input class="input-img-anuncio" id="file-image-anuncio" type="file" name="imagen" required>
+                        <button class="btn-create-anuncio-modal" type="submit">Guardar Anuncio</button>
                     </form>
                 </div>
             </div>
+
             <div>
                 <div id="grid-anuncios" class="grid-anuncios"></div>             
             </div>
+
     </main>
 
 

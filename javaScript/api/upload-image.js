@@ -16,6 +16,6 @@ async function uploadImage(formData) {
         return data; // Devolvemos la respuesta del servidor
     } catch (error) {
         console.error('Error:', error);
-        return { success: false, message: 'Erro al guardad la imagen' }; // En caso de error
+        return { success: false, message: 'Error al guardad la imagen' }; // En caso de error
     }
 }

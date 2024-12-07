@@ -27,11 +27,4 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Llenar el select al cargar la página
     await getMisNegocios();
-
-    selectElement.addEventListener('change', function () {
-        const selectedValue = selectElement.value;
-        // Guardamos la opción seleccionada en el almacenamiento local
-        localStorage.setItem('selectedNegocio', selectedValue);
-        console.log("Negocio seleccionado:", selectedValue); // Hacer algo con el negocio seleccionado
-    });
 });

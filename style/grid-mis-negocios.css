@@ -1,0 +1,41 @@
+.grid-negocios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta según el número de columnas que desees */
+    gap: 20px; /* Espacio entre los items */
+    padding: 20px;
+}
+
+.grid-negocio-item {
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), 0 6px 6px rgba(0, 0, 0, 0.45);
+}
+
+.grid-negocio-item h4{
+    color: #ffffff;
+}
+
+
+.grid-negocio-item img {
+    width: 100%;
+    height: 75%;
+    border-radius: 8px;
+}
+
+.grid-negocio-item h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.grid-negocio-item p {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.tittle-mis-negocios{
+    font-size: 32px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
